@@ -94,14 +94,19 @@ YEAR, START_MONTH_IDX, OUTPUT = read_command_line_args()
 END_MONTH_IDX = 1 if START_MONTH_IDX == len(MONTHS) else START_MONTH_IDX + 1
 END_YEAR = YEAR + 1 if START_MONTH_IDX == len(MONTHS) else YEAR
 query = {"year1": YEAR, 
-         "month1": START_MONTH_IDX, 
+         "month1": START_MONTH_IDX,
+         "day1": 1,
          "year2": END_YEAR, 
-         "month2":END_MONTH_IDX, 
+         "month2": END_MONTH_IDX,
+         "day2": 1,
          "artcc": "_ALL", 
          "fmt": "csv"}
 eprint(f"Performing GET request, this may take a moment...")
+
 r = requests.get(f"{BASE_URL}", params=query, stream=True)
 eprint(f"Request was {len(r.content)/1024/1024:.2f} Mb")
+eprint(f"Response status code: {r.status_code}")
+eprint(f"Response text preview: {r.text[:500]}")
 
 eprint("Attempting to create dataframe from csv file")
 
