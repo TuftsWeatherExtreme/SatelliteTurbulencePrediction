@@ -1,0 +1,16 @@
+goes2go==2025.2.0
+numpy==1.26.*
+pandas==2.2.3
+scipy==1.15.2
+scikit-learn==1.6.1
+xarray==2025.1.2
+torch
+Cartopy==0.24.1
+MetPy==1.6.3
+pyproj==3.7.1
+shapely==2.0.7
+s3fs==2025.2.0
+aiobotocore==2.19.0
+h5netcdf==1.5.0
+h5py==3.13.0
+matplotlib==3.10.0

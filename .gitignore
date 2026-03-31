@@ -1,0 +1,16 @@
+**/__pycache__
+**/.DS_Store
+**/.vscode
+**/.ipynb_checkpoints
+*.npz
+*.png
+**/.nova
+**/.venv
+**/.ruff_cache
+**/checkpoints
+model_inputs/
+decompressed/
+trained_model_outputs/
+*.pth
+*.out
+*.err
