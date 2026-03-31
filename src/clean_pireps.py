@@ -274,7 +274,7 @@ eprint(f"Writing {len(final_df)} pireps with altitude and turbulence to csv")
 
 
 if OUTPUT != sys.stdout:
-    filename = f"{os.path.join(DIRNAME, '..', 'pireps', 'clean_pirep_data')}/{YEAR}/{START_MONTH_IDX:02}_turb_pireps.csv"
+    filename = f"{os.path.join(DIRNAME, '..', 'pireps')}/{YEAR}/{START_MONTH_IDX:02}_turb_pireps.csv"
     os.makedirs(os.path.dirname(filename), exist_ok=True)
     eprint(f"Writing csv to output file: {filename}")
     OUTPUT = open(filename, "w")

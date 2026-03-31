@@ -18,8 +18,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
-cd $REPO_PATH
-source $REPO_PATH/hpc_scripts/load_modules.sh
+cd $SAT_REPO_PATH
+source $SAT_REPO_PATH/hpc_scripts/load_modules.sh
 
 idx=$SLURM_ARRAY_TASK_ID
 
@@ -35,8 +35,8 @@ year=${YEARS[$year_idx]}
 month=${MONTHS[$month_idx]}
 
 echo "Processing $month $year"
-python $REPO_PATH/src/clean_pireps.py -month $month -year $year -o FILE
+python $SAT_REPO_PATH/src/clean_pireps.py -month $month -year $year -o FILE
 
-source $REPO_PATH/hpc_scripts/unload_modules.sh
+source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
 
 echo "All done!"

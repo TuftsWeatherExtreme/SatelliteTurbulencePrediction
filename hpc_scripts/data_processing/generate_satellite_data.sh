@@ -19,8 +19,8 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
-cd $REPO_PATH
-source $REPO_PATH/hpc_scripts/load_modules.sh
+cd $SAT_REPO_PATH
+source $SAT_REPO_PATH/hpc_scripts/load_modules.sh
 
 idx=$SLURM_ARRAY_TASK_ID
 
@@ -39,16 +39,16 @@ month_num=$(printf "%02d" $((month_idx + 1)))
 # Skip Jan/Feb 2017 (GOES-16 not yet available)
 if [ "$year" == "2017" ] && [ "$month_num" -lt "03" ]; then
     echo "Skipping $year/$month_num (GOES-16 not available)"
-    source $REPO_PATH/hpc_scripts/unload_modules.sh
+    source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
     exit 0
 fi
 
-PIREP_CSV=$REPO_PATH/pireps/clean_pirep_data/$year/${month_num}_turb_pireps.csv
-OUTPUT_DIR=$REPO_PATH/model_inputs/${year}_${month_num}
+PIREP_CSV=$SAT_REPO_PATH/src/pireps/$year/${month_num}_turb_pireps.csv
+OUTPUT_DIR=$SAT_REPO_PATH/model_inputs/${year}_${month_num}
 
 if [ ! -f "$PIREP_CSV" ]; then
     echo "No PIREP CSV found at $PIREP_CSV, skipping"
-    source $REPO_PATH/hpc_scripts/unload_modules.sh
+    source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
     exit 0
 fi
 
@@ -56,9 +56,9 @@ echo "Processing $year/$month_num"
 mkdir -p $OUTPUT_DIR
 
 echo "Fetching satellite data for PIREPs in $PIREP_CSV"
-python3 $REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
+python3 $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
 echo "Python script exit code: $?"
 
-source $REPO_PATH/hpc_scripts/unload_modules.sh
+source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
 
 echo "All done!"
