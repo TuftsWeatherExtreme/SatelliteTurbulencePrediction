@@ -4,8 +4,8 @@
 # Authors: Team Celestial Blue
 # Spring 2025
 # Overview: For each month/year of cleaned PIREPs, fetch GOES-16 satellite images
-# (32 frames at 15-min intervals, 6 bands) cropped around each PIREP location
-# and save as .npz files.
+# (1 frame every 15 minutes for 8 hours, 6 bands) cropped around each PIREP location and save as .npz.
+# Then compress into tar.xz archives.
 # Note: GOES-16 data only available from March 2017 onward.
 
 #SBATCH -J sat_gen
@@ -13,8 +13,8 @@
 #SBATCH -p batch,preempt
 #SBATCH -n 1
 #SBATCH --mem=32g
-#SBATCH --output=sat_gen.%j.%a.%N.out
-#SBATCH --error=sat_gen.%j.%a.%N.err
+#SBATCH --output=sat_output/sat_gen.%j.%a.%N.out
+#SBATCH --error=sat_output/sat_gen.%j.%a.%N.err
 #SBATCH --array=0-107
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
@@ -56,9 +56,9 @@ echo "Processing $year/$month_num"
 mkdir -p $OUTPUT_DIR
 
 echo "Fetching satellite data for PIREPs in $PIREP_CSV"
-python3 -u $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
+python3 $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
 echo "Python script exit code: $?"
 
-source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
+# source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
 
 echo "All done!"
