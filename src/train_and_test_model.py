@@ -24,7 +24,7 @@ BATCH_SIZE = 16
 NUM_FOLDS = 6
 CROP_SIZE = 128
 NUM_BANDS = 6
-NUM_FRAMES = 32
+NUM_FRAMES = 15
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 MODEL_INPUTS_DIR = os.path.join(SCRIPT_DIR, "..", "model_inputs")

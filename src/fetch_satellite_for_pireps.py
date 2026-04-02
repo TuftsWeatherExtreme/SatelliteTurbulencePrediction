@@ -1,10 +1,9 @@
 # fetch_satellite_for_pireps.py
 # Authors: Team Celestial Blue
 # Spring 2025
-# Purpose: For each PIREP in a clean CSV, fetch 9 consecutive hourly GOES-16
-#          satellite images (bands 8,9,10,13,14,15), crop around the PIREP
-#          location, and save as .npz model inputs.
-# Usage: python fetch_satellite_for_pireps.py <input_csv> <output_dir>
+# Purpose: For each PIREP in a clean CSV, fetch GOES-16 satellite images
+#          at 15-min intervals, crop around the PIREP location, and save as .npz.
+# Usage: python -u fetch_satellite_for_pireps.py <input_csv> <output_dir>
 
 import sys
 import os
@@ -12,14 +11,13 @@ import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
 from goes2go import GOES
+import time as time_module
 
 # Add src/ to path for local imports
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import satellite as sat
-from consts import GRID_RANGE, MAP_RANGE
-from utils.convert import convert_coord
+from consts import GRID_RANGE, MAP_RANGE, BANDS, NUM_FRAMES, FRAME_INTERVAL_MIN, CROP_SIZE
 
-from consts import BANDS, NUM_FRAMES, FRAME_INTERVAL_MIN, CROP_SIZE
 
 def get_crop_indices(pirep_lat, pirep_lon):
     """
@@ -57,12 +55,41 @@ def get_crop_indices(pirep_lat, pirep_lon):
     return row_start, row_end, col_start, col_end
 
 
-def fetch_frames_for_pirep(pirep_dt, pirep_lat, pirep_lon, goes_sat):
-    """
-    Fetch 9 hourly satellite frames ending at the PIREP time,
-    project onto the CONUS grid, smooth, and crop around PIREP location.
+def round_to_interval(dt, interval_min=FRAME_INTERVAL_MIN):
+    """Round a datetime down to the nearest interval for cache keying."""
+    minutes = (dt.minute // interval_min) * interval_min
+    return dt.replace(minute=minutes, second=0, microsecond=0)
 
-    Returns numpy array of shape (9, CROP_SIZE, CROP_SIZE, 6) or None on failure.
+
+def fetch_and_process_image(timestamp, goes_sat, cache):
+    """
+    Fetch a single satellite image, project, and smooth it.
+    Uses an in-memory cache to avoid re-fetching the same timestamp.
+    Returns the smoothed full CONUS array (1, 1500, 2500, 6) or None.
+    """
+    cache_key = round_to_interval(timestamp)
+
+    if cache_key in cache:
+        return cache[cache_key]
+
+    try:
+        data = sat.fetch(timestamp, goes_sat)
+        lat, lon = sat.calculate_coordinates(data)
+        band_data = sat.fetch_bands(data, BANDS)
+        projected = sat.project(lat, lon, band_data.values)
+        smoothed = sat.smooth(projected)
+        cache[cache_key] = smoothed
+        return smoothed
+    except Exception as e:
+        print(f"  WARNING: Failed to fetch image at {timestamp}: {e}", flush=True)
+        cache[cache_key] = None
+        return None
+
+
+def fetch_frames_for_pirep(pirep_dt, pirep_lat, pirep_lon, goes_sat, cache):
+    """
+    Fetch satellite frames for a single PIREP, using cached images where available.
+    Returns numpy array of shape (NUM_FRAMES, CROP_SIZE, CROP_SIZE, 6) or None.
     """
     crop = get_crop_indices(pirep_lat, pirep_lon)
     if crop is None:
@@ -70,28 +97,25 @@ def fetch_frames_for_pirep(pirep_dt, pirep_lat, pirep_lon, goes_sat):
 
     row_start, row_end, col_start, col_end = crop
     frames = np.zeros((NUM_FRAMES, CROP_SIZE, CROP_SIZE, len(BANDS)), dtype=np.float32)
+    frames_fetched = 0
 
     for i in range(NUM_FRAMES):
-        # t=0 is the PIREP time, t=1 is 30 min before, etc.
         timestamp = pirep_dt - timedelta(minutes=i * FRAME_INTERVAL_MIN)
-        try:
-            data = sat.fetch(timestamp, goes_sat)
-            lat, lon = sat.calculate_coordinates(data)
-            band_data = sat.fetch_bands(data, BANDS)
-            projected = sat.project(lat, lon, band_data.values)
-            smoothed = sat.smooth(projected)
-            # Crop around PIREP location
+        smoothed = fetch_and_process_image(timestamp, goes_sat, cache)
+
+        if smoothed is not None:
             frames[NUM_FRAMES - 1 - i] = smoothed[0, row_start:row_end, col_start:col_end, :]
-        except Exception as e:
-            print(f"WARNING: Failed to fetch frame at {timestamp}: {e}")
-            # Leave as zeros
+            frames_fetched += 1
+
+    if frames_fetched == 0:
+        return None
 
     return frames
 
 
 def main():
     if len(sys.argv) != 3:
-        print(f"Usage: python {sys.argv[0]} <input_csv> <output_dir>")
+        print(f"Usage: python -u {sys.argv[0]} <input_csv> <output_dir>")
         sys.exit(1)
 
     input_csv = sys.argv[1]
@@ -99,25 +123,35 @@ def main():
     os.makedirs(output_dir, exist_ok=True)
 
     pireps_df = pd.read_csv(input_csv)
-    print(f"Processing {len(pireps_df)} PIREPs from {input_csv}")
+    print(f"Processing {len(pireps_df)} PIREPs from {input_csv}", flush=True)
 
     goes_sat = GOES(satellite=16, product="ABI", domain="C")
     num_saved = 0
     num_failed = 0
+
+    # In-memory cache for projected satellite images (keyed by rounded timestamp)
+    # This avoids re-fetching the same image for PIREPs at similar times
+    image_cache = {}
+    start_time = time_module.time()
 
     for idx, pirep in pireps_df.iterrows():
         pirep_dt = datetime.fromisoformat(pirep['datetime'])
         pirep_lat = pirep['LAT']
         pirep_lon = pirep['LON']
 
+        pirep_start = time_module.time()
+        print(f"[{idx+1}/{len(pireps_df)}] PIREP at ({pirep_lat:.2f}, {pirep_lon:.2f}) "
+              f"FL{int(pirep['FL'])} {pirep_dt} (cache: {len(image_cache)} images)", flush=True)
+
         try:
-            frames = fetch_frames_for_pirep(pirep_dt, pirep_lat, pirep_lon, goes_sat)
+            frames = fetch_frames_for_pirep(pirep_dt, pirep_lat, pirep_lon, goes_sat, image_cache)
         except Exception as e:
-            print(f"ERROR processing PIREP {idx}: {e}")
+            print(f"  ERROR: {e}", flush=True)
             num_failed += 1
             continue
 
         if frames is None:
+            print(f"  SKIPPED: no frames fetched", flush=True)
             num_failed += 1
             continue
 
@@ -133,11 +167,13 @@ def main():
             datetime=str(pirep['datetime']),
         )
         num_saved += 1
+        elapsed = time_module.time() - pirep_start
+        print(f"  SAVED {output_path} ({elapsed:.1f}s)", flush=True)
 
-        if (idx + 1) % max(1, len(pireps_df) // 20) == 0:
-            print(f"Progress: {idx + 1}/{len(pireps_df)} ({num_saved} saved, {num_failed} failed)")
-
-    print(f"Done. Saved {num_saved}/{len(pireps_df)} model inputs, {num_failed} failed.")
+    total_time = time_module.time() - start_time
+    print(f"\nDone. Saved {num_saved}/{len(pireps_df)} model inputs, "
+          f"{num_failed} failed. Total time: {total_time/60:.1f} min", flush=True)
+    print(f"Unique satellite images fetched: {len(image_cache)}", flush=True)
 
 
 if __name__ == "__main__":

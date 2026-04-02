@@ -1,7 +1,7 @@
 # Satellite constants
 BANDS = [8, 9, 10, 13, 14, 15]
-NUM_FRAMES = 32
-FRAME_INTERVAL_MIN = 15  # minutes between frames
+NUM_FRAMES = 15
+FRAME_INTERVAL_MIN = 5  # minutes between frames
 SATELLITE_NUMBER = 16
 SATELLITE_PRODUCT = "ABI"
 SATELLITE_DOMAIN = "C"

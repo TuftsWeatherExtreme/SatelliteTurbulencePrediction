@@ -56,7 +56,7 @@ echo "Processing $year/$month_num"
 mkdir -p $OUTPUT_DIR
 
 echo "Fetching satellite data for PIREPs in $PIREP_CSV"
-python3 $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
+python3 -u $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
 echo "Python script exit code: $?"
 
 source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
