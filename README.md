@@ -1,22 +1,5 @@
-# Usage of Docker for this Project
+# No more Docker usage for this project
 
-We run our code using a Docker container that has all of our dependencies in it. 
-
-In order to launch the container for our code, you must download [Docker Desktop](https://www.docker.com/products/docker-desktop/) for your OS. Docker will prompt you to create an account. Unless you intend to push or make new images, for the purposes of our application, you do not need an account as we are already hosting our container on Docker Hub.
-
-`Dockerfile` is the file that defines the image for that container. 
-
-There are two ways to obtain a built image and run our code. Both result in equivalent behavior, do whichever is easier:
-
-* There is a pre-built version of this image that can be pulled from dockerhub at `docker://aauretto122/skyblue_images:final-sp25` or by visiting [THIS LINK](https://hub.docker.com/layers/aauretto122/skyblue_images/final-sp25/images/sha256-6149057d4328484c580b57be5ec7291643dcad72bb8cf43e2e253c3070688b4e)
-
-* The image may be built from the top level of the GitHub Repository (aka skyblue) do this command (should work for Powershell or WSL. Mac
-users may need to do platform-specific things): `docker build -t <image_name>:latest .`
-
-Our container can be used for development by running it in interactive mode using this command: `docker run --gpus all -it --rm -v ${PWD}:/skyblue/ <image_name>:latest`
-The above command needs to be run from the skyblue directory on your computer and will load in the files in that directory so they can be modified or executed in the container. Changes (incluing deletion) made to files under the /skyblue directory in the container will be reflected outside of the container.
-
-Our code uses the default python in the container (python 3.11), which can be run using the command `python` from inside the container.
 
 # Tufts High Performance Computing Cluster (HPC) Setup and Workflow:
 ## Usage of Singularity for this project:
