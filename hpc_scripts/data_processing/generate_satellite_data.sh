@@ -4,8 +4,8 @@
 # Authors: Team Celestial Blue
 # Spring 2025
 # Overview: For each month/year of cleaned PIREPs, fetch GOES-16 satellite images
-# (9 hourly frames, 6 bands) cropped around each PIREP location and save as .npz.
-# Then compress into tar.xz archives.
+# (32 frames at 15-min intervals, 6 bands) cropped around each PIREP location
+# and save as .npz files.
 # Note: GOES-16 data only available from March 2017 onward.
 
 #SBATCH -J sat_gen
@@ -43,7 +43,7 @@ if [ "$year" == "2017" ] && [ "$month_num" -lt "03" ]; then
     exit 0
 fi
 
-PIREP_CSV=$SAT_REPO_PATH/src/pireps/$year/${month_num}_turb_pireps.csv
+PIREP_CSV=$SAT_REPO_PATH/pireps/$year/${month_num}_turb_pireps.csv
 OUTPUT_DIR=$SAT_REPO_PATH/model_inputs/${year}_${month_num}
 
 if [ ! -f "$PIREP_CSV" ]; then
