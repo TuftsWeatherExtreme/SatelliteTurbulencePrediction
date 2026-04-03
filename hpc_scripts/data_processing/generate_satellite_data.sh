@@ -4,7 +4,7 @@
 # Authors: Team Celestial Blue
 # Spring 2025
 # Overview: For each month/year of cleaned PIREPs, fetch GOES-16 satellite images
-# (1 frame every 15 minutes for 8 hours, 6 bands) cropped around each PIREP location and save as .npz.
+# (15 frames, 5 minutes apart, i.e. 75 minutes of timeline ending at the PIREP time, 6 bands) cropped around each PIREP location and save as .npz.
 # Then compress into tar.xz archives.
 # Note: GOES-16 data only available from March 2017 onward.
 
