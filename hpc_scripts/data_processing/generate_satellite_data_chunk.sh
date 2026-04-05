@@ -47,6 +47,12 @@ if [ "$year" == "2017" ] && [ "$month_num" -lt "03" ]; then
     exit 0
 fi
 
+if [ "$year" == "2025" ] && [ "$month_num" -gt "04" ]; then
+    echo "Skipping $year/$month_num (GOES-16 not yet available on AWS)"
+    source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
+    exit 0
+fi
+
 PIREP_CSV=$SAT_REPO_PATH/pireps/$year/${month_num}_turb_pireps.csv
 OUTPUT_DIR=$SAT_REPO_PATH/model_inputs/${year}_${month_num}
 
