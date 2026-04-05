@@ -15,7 +15,7 @@
 #SBATCH --mem=32g
 #SBATCH --output=sat_output/sat_gen.%j.%a.%N.out
 #SBATCH --error=sat_output/sat_gen.%j.%a.%N.err
-#SBATCH --array=0-1079
+#SBATCH --array=0-755   # 108 months × 7 chunks
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
@@ -30,8 +30,8 @@ MONTHS=("january" "february" "march" "april" "may" "june" "july" "august" "septe
 
 num_months=${#MONTHS[@]}
 
-CHUNK_SIZE=110
-CHUNKS_PER_MONTH=10
+CHUNK_SIZE=150
+CHUNKS_PER_MONTH=7
 
 chunk_idx=$((idx % CHUNKS_PER_MONTH))
 month_idx=$(( (idx / CHUNKS_PER_MONTH) % num_months ))
