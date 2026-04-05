@@ -29,7 +29,7 @@ class SatelliteDataLoader(Dataset):
 
     def __getitem__(self, idx):
         npz = np.load(self.file_paths[idx])
-        # images shape: (32, 128, 128, 6) -> reorder to (32, 6, 128, 128) for PyTorch
+        # images shape: (15, 128, 128, 6) -> reorder to (15, 6, 128, 128) for PyTorch
         images = npz['images'].transpose(0, 3, 1, 2)
         features = torch.tensor(images, dtype=torch.float32)
         features = torch.nan_to_num(features, nan=0.0)
