@@ -4,7 +4,6 @@ pandas==2.2.3
 scipy==1.15.2
 scikit-learn==1.6.1
 xarray==2025.1.2
-torch
 Cartopy==0.24.1
 MetPy==1.6.3
 pyproj==3.7.1
