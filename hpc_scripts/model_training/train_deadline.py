@@ -248,7 +248,9 @@ def main():
         if args.data_dir
         else os.path.abspath(MODEL_INPUTS_DIR)
     )
-    smoke_tag = f"max{args.max_samples}" if args.max_samples else None
+    run_tag = "deadline"
+    if args.max_samples:
+        run_tag = f"deadline_max{args.max_samples}"
 
     ModelClass = MODELS[model_type]
     torch.manual_seed(SEED)
@@ -288,7 +290,7 @@ def main():
     # K-fold CV to find best L2 regularization
     kfold = KFold(n_splits=NUM_FOLDS, shuffle=True, random_state=42)
     l2_values = [0.01, 0]
-    checkpoint_path = get_checkpoint_path(model_type, SEED, smoke_tag)
+    checkpoint_path = get_checkpoint_path(model_type, SEED, run_tag)
 
     # Try to resume from checkpoint
     start_l2_idx = 0
