@@ -4,9 +4,11 @@
 # Purpose: Train and evaluate satellite turbulence models using k-fold cross-validation.
 #          Supports both ConvLSTM and Conv3D architectures.
 #          Includes checkpoint/resume for HPC preemption handling.
-# Usage: python train_and_test_model.py <seed> <model_type>
+# Usage: python train_and_test_model.py <seed> <model_type> [--max-samples N] [--data-dir PATH]
 #        model_type: "convlstm" or "conv3d"
+#        --max-samples: use only the first N .npz files (sorted paths) for a quick smoke test
 
+import argparse
 import os
 import sys
 import time
@@ -19,7 +21,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Subset
 from sklearn.model_selection import KFold
 
-NUM_EPOCHS = 5
+NUM_EPOCHS = 20
 BATCH_SIZE = 16
 NUM_FOLDS = 6
 CROP_SIZE = 128
@@ -149,7 +151,10 @@ MODELS = {
 }
 
 
-def get_checkpoint_path(model_type, seed):
+def get_checkpoint_path(model_type, seed, tag=None):
+    """tag: e.g. 'max64' when using --max-samples so full runs don't share checkpoints."""
+    if tag:
+        return os.path.join(OUTPUT_DIR, f"{model_type}_{seed}_{tag}_checkpoint.pth")
     return os.path.join(OUTPUT_DIR, f"{model_type}_{seed}_checkpoint.pth")
 
 
@@ -212,17 +217,38 @@ def evaluate(model, loader, device):
 
 
 def main():
-    if len(sys.argv) != 3:
-        print(f"Usage: python {sys.argv[0]} <seed> <model_type>")
-        print(f"  model_type: {', '.join(MODELS.keys())}")
-        sys.exit(1)
+    parser = argparse.ArgumentParser(
+        description="Train/evaluate satellite turbulence models (ConvLSTM or Conv3D)."
+    )
+    parser.add_argument("seed", type=int)
+    parser.add_argument("model_type", type=str)
+    parser.add_argument(
+        "--max-samples",
+        type=int,
+        default=None,
+        help="Use only the first N samples (sorted .npz paths) for a quick smoke test.",
+    )
+    parser.add_argument(
+        "--data-dir",
+        type=str,
+        default=None,
+        help="Directory containing model_inputs tree (default: ../model_inputs under src/).",
+    )
+    args = parser.parse_args()
 
-    SEED = int(sys.argv[1])
-    model_type = sys.argv[2].lower()
+    SEED = args.seed
+    model_type = args.model_type.lower()
 
     if model_type not in MODELS:
         print(f"Unknown model type: {model_type}. Choose from: {', '.join(MODELS.keys())}")
         sys.exit(1)
+
+    model_inputs_dir = (
+        os.path.abspath(args.data_dir)
+        if args.data_dir
+        else os.path.abspath(MODEL_INPUTS_DIR)
+    )
+    smoke_tag = f"max{args.max_samples}" if args.max_samples else None
 
     ModelClass = MODELS[model_type]
     torch.manual_seed(SEED)
@@ -232,10 +258,21 @@ def main():
     num_gpus = torch.cuda.device_count()
     print(f"Using device: {device} ({num_gpus} GPU(s))")
     print(f"Model type: {model_type}")
+    print(f"Data directory: {model_inputs_dir}")
 
     # Load dataset (lazy loading from .npz files)
     from dataloader_class import SatelliteDataLoader
-    dataset = SatelliteDataLoader(MODEL_INPUTS_DIR)
+    dataset = SatelliteDataLoader(model_inputs_dir)
+    if args.max_samples is not None:
+        n = min(len(dataset), args.max_samples)
+        if n < NUM_FOLDS:
+            print(
+                f"Warning: --max-samples yields n={n} but KFold uses n_splits={NUM_FOLDS}; "
+                f"use at least {NUM_FOLDS} samples.",
+                file=sys.stderr,
+            )
+        dataset = Subset(dataset, list(range(n)))
+        print(f"Subset smoke test: using {len(dataset)} samples (max {args.max_samples})")
     print(f"Dataset size: {len(dataset)}")
 
     # Split 85% train, 15% test
@@ -247,7 +284,7 @@ def main():
     # K-fold CV to find best L2 regularization
     kfold = KFold(n_splits=NUM_FOLDS, shuffle=True, random_state=42)
     l2_values = [0.1, 0.01, 0.001, 0]
-    checkpoint_path = get_checkpoint_path(model_type, SEED)
+    checkpoint_path = get_checkpoint_path(model_type, SEED, smoke_tag)
 
     # Try to resume from checkpoint
     start_l2_idx = 0

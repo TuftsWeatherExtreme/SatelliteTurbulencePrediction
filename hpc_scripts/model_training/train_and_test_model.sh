@@ -16,17 +16,18 @@
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
 
-cd $REPO_PATH
-source $REPO_PATH/hpc_scripts/load_modules.sh
+cd $SAT_REPO_PATH
+source $SAT_REPO_PATH/hpc_scripts/load_modules.sh
 nvidia-smi
 
 seed=$1
 model_type=$2
 
 echo "About to train the $model_type model with seed $seed"
-python -u $REPO_PATH/src/train_and_test_model.py $seed $model_type
+python -u $SAT_REPO_PATH/src/train_and_test_model.py $seed $model_type \
+    --data-dir $SAT_REPO_PATH/model_inputs
 echo "Finished training and testing the model!"
 
-source $REPO_PATH/hpc_scripts/unload_modules.sh
+source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
 
 echo "All done!"
