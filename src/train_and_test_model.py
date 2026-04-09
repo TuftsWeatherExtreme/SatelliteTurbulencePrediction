@@ -23,7 +23,7 @@ from sklearn.model_selection import KFold
 
 NUM_EPOCHS = 20
 BATCH_SIZE = 16
-NUM_FOLDS = 6
+NUM_FOLDS = 3
 CROP_SIZE = 128
 NUM_BANDS = 6
 NUM_FRAMES = 15
@@ -258,6 +258,8 @@ def main():
     num_gpus = torch.cuda.device_count()
     print(f"Using device: {device} ({num_gpus} GPU(s))")
     print(f"Model type: {model_type}")
+    print(f"Thresholds for test eval: {[0.3, 0.4, 0.5]}")
+    print(f"Number of EPOCHS: {NUM_EPOCHS}")
     print(f"Data directory: {model_inputs_dir}")
 
     # Load dataset (lazy loading from .npz files)
@@ -283,7 +285,7 @@ def main():
 
     # K-fold CV to find best L2 regularization
     kfold = KFold(n_splits=NUM_FOLDS, shuffle=True, random_state=42)
-    l2_values = [0.1, 0.01, 0.001, 0]
+    l2_values = [0.003, 0.001, 0.0003]
     checkpoint_path = get_checkpoint_path(model_type, SEED, smoke_tag)
 
     # Try to resume from checkpoint
@@ -374,43 +376,79 @@ def main():
 
     # Test evaluation
     print("\nEvaluating on test set...")
-    num_correct = 0
-    num_true_pos = 0
-    num_false_pos = 0
-    num_true_neg = 0
-    num_false_neg = 0
-    total = 0
-
+    
+    thresholds = [0.3, 0.4, 0.5]
+    
     best_model.eval()
+    all_probs = []
+    all_labels = []
+    
     with torch.no_grad():
         for x_test, y_test, w_test in test_loader:
-            x_test, y_test = x_test.to(device), y_test.long().to(device)
+            x_test = x_test.to(device)
+            y_test = y_test.long().to(device)
+    
             y_hat = best_model(x_test)
-            preds = torch.argmax(y_hat, dim=1)
-            for i in range(len(y_test)):
-                true_label = y_test[i].item()
-                pred_label = preds[i].item()
-                total += 1
-                if true_label == pred_label:
-                    num_correct += 1
-                if true_label == 1 and pred_label == 1:
-                    num_true_pos += 1
-                elif true_label == 0 and pred_label == 1:
-                    num_false_pos += 1
-                elif true_label == 0 and pred_label == 0:
-                    num_true_neg += 1
-                elif true_label == 1 and pred_label == 0:
-                    num_false_neg += 1
-
-    precision = num_true_pos / max(1, num_true_pos + num_false_pos)
-    recall = num_true_pos / max(1, num_true_pos + num_false_neg)
-    f1 = 2 * precision * recall / max(1e-8, precision + recall)
-
-    print(f"Accuracy: {num_correct}/{total} ({100 * num_correct / total:.2f}%)")
-    print(f"Precision: {precision:.4f}")
-    print(f"Recall: {recall:.4f}")
-    print(f"F1 Score: {f1:.4f}")
-    print(f"Confusion matrix: TP={num_true_pos}, FP={num_false_pos}, TN={num_true_neg}, FN={num_false_neg}")
+    
+            # Probability of the positive class (class 1)
+            probs = torch.softmax(y_hat, dim=1)[:, 1]
+    
+            all_probs.append(probs.cpu())
+            all_labels.append(y_test.cpu())
+    
+    all_probs = torch.cat(all_probs)
+    all_labels = torch.cat(all_labels)
+    
+    # --- PR diagnostics ---
+    pos_rate = (all_labels == 1).float().mean().item()
+    avg_prob = all_probs.mean().item()
+    
+    print("\n=== DATA / MODEL DIAGNOSTICS ===")
+    print(f"True positive rate in dataset: {pos_rate:.4f}")
+    print(f"Average predicted probability: {avg_prob:.4f}")
+    
+    for threshold in thresholds:
+        preds = (all_probs >= threshold).long()
+    
+        num_correct = int((preds == all_labels).sum().item())
+        total = len(all_labels)
+    
+        num_true_pos = int(((all_labels == 1) & (preds == 1)).sum().item())
+        num_false_pos = int(((all_labels == 0) & (preds == 1)).sum().item())
+        num_true_neg = int(((all_labels == 0) & (preds == 0)).sum().item())
+        num_false_neg = int(((all_labels == 1) & (preds == 0)).sum().item())
+    
+        precision = num_true_pos / max(1, num_true_pos + num_false_pos)
+        recall = num_true_pos / max(1, num_true_pos + num_false_neg)
+        f1 = 2 * precision * recall / max(1e-8, precision + recall)
+        
+        # --- prediction behavior diagnostics ---
+        pred_pos_rate = preds.float().mean().item()
+    
+        # avg prob for true positives and true negatives
+        if num_true_pos > 0:
+            avg_prob_tp = all_probs[(all_labels == 1) & (preds == 1)].mean().item()
+        else:
+            avg_prob_tp = float('nan')
+    
+        if num_true_neg > 0:
+            avg_prob_tn = all_probs[(all_labels == 0) & (preds == 0)].mean().item()
+        else:
+            avg_prob_tn = float('nan')
+    
+        print(f"\nThreshold = {threshold:.1f}")
+        print(f"Accuracy: {num_correct}/{total} ({100 * num_correct / total:.2f}%)")
+        print(f"Precision: {precision:.4f}")
+        print(f"Recall: {recall:.4f}")
+        print(f"F1 Score: {f1:.4f}")
+        print(
+            f"Confusion matrix: TP={num_true_pos}, FP={num_false_pos}, "
+            f"TN={num_true_neg}, FN={num_false_neg}"
+        )
+        
+        print(f"Predicted positive rate: {pred_pos_rate:.4f}")
+        print(f"Avg prob (true positives): {avg_prob_tp:.4f}")
+        print(f"Avg prob (true negatives): {avg_prob_tn:.4f}")
 
     # Save model and clean up checkpoint
     timestamp = datetime.datetime.now().strftime("%Y_%m_%d_%H_%M")

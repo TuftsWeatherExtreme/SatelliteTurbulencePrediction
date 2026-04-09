@@ -21,7 +21,7 @@ import torch.optim as optim
 from torch.utils.data import DataLoader, Subset
 from sklearn.model_selection import KFold
 
-NUM_EPOCHS = 10
+NUM_EPOCHS = 5
 NUM_FOLDS = 3
 BATCH_SIZE = 16
 CROP_SIZE = 128
@@ -195,17 +195,8 @@ def train_epoch(model, loader, optimizer, device):
         x, y, w = x.to(device), y.long().to(device), w.to(device)
         optimizer.zero_grad()
         y_hat = model(x)
-        
-        # loss = F.cross_entropy(y_hat, y, reduction='none')
-        # loss = (loss * w).mean()
-        
-        # trying to fix inbalanced weights
-        class_counts = torch.tensor([3567, 6553], dtype=torch.float32)
-        class_weights = (1.0 / class_counts)
-        class_weights = class_weights / class_weights.sum()
-        class_weights = class_weights.to(device)
-        loss = F.cross_entropy(y_hat, y, weight=class_weights)
-        
+        loss = F.cross_entropy(y_hat, y, reduction='none')
+        loss = (loss * w).mean()
         loss.backward()
         optimizer.step()
         total_loss += loss.item()
@@ -219,17 +210,8 @@ def evaluate(model, loader, device):
         for x, y, w in loader:
             x, y, w = x.to(device), y.long().to(device), w.to(device)
             y_hat = model(x)
-            
-            # loss = F.cross_entropy(y_hat, y, reduction='none')
-            # loss = (loss * w).mean()
-            
-            # trying to fix inbalanced weights
-            class_counts = torch.tensor([3567, 6553], dtype=torch.float32)
-            class_weights = (1.0 / class_counts)
-            class_weights = class_weights / class_weights.sum()
-            class_weights = class_weights.to(device)
-            loss = F.cross_entropy(y_hat, y, weight=class_weights)
-            
+            loss = F.cross_entropy(y_hat, y, reduction='none')
+            loss = (loss * w).mean()
             total_loss += loss.item()
     return total_loss / len(loader)
 
@@ -282,7 +264,6 @@ def main():
         print("WARNING: GPU allocated but PyTorch is using CPU")
     
     print(f"Model type: {model_type}")
-    print(f"Number of EPOCHS: {NUM_EPOCHS}")
     print(f"Data directory: {model_inputs_dir}")
 
     # Load dataset (lazy loading from .npz files)

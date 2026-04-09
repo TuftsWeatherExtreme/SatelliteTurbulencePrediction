@@ -24,7 +24,7 @@ seed=$1
 model_type=$2
 
 echo "About to train the $model_type model with seed $seed"
-python -u $SAT_REPO_PATH/src/train_deadline.py $seed $model_type \
+python -u $SAT_REPO_PATH/src/train_and_test_model.py $seed $model_type \
     --data-dir $SAT_REPO_PATH/model_inputs
 echo "Finished training and testing the model!"
 
