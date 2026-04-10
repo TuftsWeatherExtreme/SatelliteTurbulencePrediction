@@ -1,0 +1,22 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2023/03 chunk [0:110]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2023/03_turb_pireps.csv
+Processing chunk [0:110] (110 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2023/03_turb_pireps.csv
+[1/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2023_03/0000000.npz (already exists)
+[2/110] PIREP at (37.09, -83.87) FL8000 2023-03-01 13:03:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2023_03/0000623.npz (3199.1s total | fetch=3168.8s project=2.1s smooth=21.0s | cache hits=0 misses=15)
+[3/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2023_03/0000001.npz (already exists)
+[4/110] PIREP at (60.57, -151.24) FL2000 2023-03-01 14:10:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2023_03/0000829.npz (14458.4s total | fetch=14430.2s project=2.0s smooth=19.7s | cache hits=1 misses=14)
+[5/110] PIREP at (40.87, -77.81) FL1200 2023-03-01 14:16:00 (cache: 29 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2023_03/0000642.npz (1016.6s total | fetch=1014.4s project=0.1s smooth=1.4s | cache hits=14 misses=1)
+[6/110] PIREP at (27.21, -81.70) FL3000 2023-03-01 15:42:00 (cache: 30 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2023_03/0000745.npz (17005.9s total | fetch=16975.1s project=2.1s smooth=21.3s | cache hits=0 misses=15)
+[7/110] PIREP at (32.42, -81.40) FL2500 2023-03-01 17:41:00 (cache: 45 images)

@@ -1,0 +1,18 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2019/10 chunk [0:110]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2019/10_turb_pireps.csv
+Processing chunk [0:110] (110 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2019/10_turb_pireps.csv
+[1/110] PIREP at (58.80, -156.43) FL20000 2019-10-01 00:45:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2019_10/0000287.npz (4176.8s total | fetch=4143.4s project=2.5s smooth=23.8s | cache hits=0 misses=15)
+[2/110] PIREP at (39.71, -112.51) FL10500 2019-10-01 03:59:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2019_10/0000506.npz (138.5s total | fetch=104.7s project=2.5s smooth=23.9s | cache hits=0 misses=15)
+[3/110] PIREP at (42.97, -83.75) FL36000 2019-10-01 13:15:00 (cache: 30 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2019_10/0000500.npz (9558.6s total | fetch=9526.7s project=2.4s smooth=22.6s | cache hits=0 misses=15)
+[4/110] PIREP at (42.35, -93.46) FL38000 2019-10-01 14:20:00 (cache: 45 images)

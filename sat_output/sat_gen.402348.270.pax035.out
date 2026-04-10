@@ -1,0 +1,23 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Allocating resources with slurm...
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2020/03 chunk [600:750]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/03_turb_pireps.csv
+Processing chunk [600:750] (94 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/03_turb_pireps.csv
+[1/94] PIREP at (32.85, -111.32) FL39000 2020-03-25 14:38:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000408.npz (9782.4s total | fetch=9752.3s project=2.0s smooth=21.0s | cache hits=0 misses=15)
+[2/94] PIREP at (33.83, -116.51) FL11000 2020-03-25 15:35:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000297.npz (8681.0s total | fetch=8656.2s project=1.7s smooth=17.1s | cache hits=3 misses=12)
+[3/94] PIREP at (42.55, -94.20) FL39000 2020-03-25 16:40:00 (cache: 27 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000521.npz (11126.2s total | fetch=11091.6s project=3.1s smooth=23.3s | cache hits=2 misses=13)
+[4/94] PIREP at (40.23, -77.02) FL17000 2020-03-25 17:15:00 (cache: 40 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000298.npz (6629.9s total | fetch=6609.9s project=1.9s smooth=13.3s | cache hits=8 misses=7)
+[5/94] PIREP at (49.78, -87.45) FL26000 2020-03-25 17:25:00 (cache: 47 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000299.npz (1723.6s total | fetch=1717.8s project=0.5s smooth=3.8s | cache hits=13 misses=2)
+[6/94] PIREP at (28.47, -79.17) FL39000 2020-03-25 18:09:00 (cache: 49 images)

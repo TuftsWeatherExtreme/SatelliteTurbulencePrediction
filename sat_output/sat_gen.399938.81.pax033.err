@@ -1,0 +1,1 @@
+/var/spool/slurm/job399938/slurm_script: line 67: 1992203 Segmentation fault      (core dumped) python3 $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR $CHUNK_START $CHUNK_END

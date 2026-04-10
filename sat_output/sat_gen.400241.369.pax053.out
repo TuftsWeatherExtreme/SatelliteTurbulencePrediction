@@ -1,0 +1,16 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2020/01 chunk [990:1100]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/01_turb_pireps.csv
+Processing chunk [990:1100] (0 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/01_turb_pireps.csv
+
+Done. Saved 0, skipped 0, failed 0 / 0 PIREPs in chunk. Total time: 0.0 min
+Unique satellite images in cache at exit: 0
+Python script exit code: 0
+All done!

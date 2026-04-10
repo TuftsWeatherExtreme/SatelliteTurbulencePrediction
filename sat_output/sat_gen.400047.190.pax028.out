@@ -1,0 +1,40 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2018/08 chunk [0:110]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2018/08_turb_pireps.csv
+Processing chunk [0:110] (110 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2018/08_turb_pireps.csv
+[1/110] PIREP at (30.21, -91.98) FL39000 2018-08-01 00:18:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000235.npz (14443.8s total | fetch=14413.8s project=2.0s smooth=20.8s | cache hits=0 misses=15)
+[2/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000000.npz (already exists)
+[3/110] PIREP at (40.98, -85.19) FL24000 2018-08-01 10:40:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000184.npz (238.5s total | fetch=208.5s project=2.1s smooth=20.9s | cache hits=0 misses=15)
+[4/110] PIREP at (43.52, -89.77) FL31000 2018-08-01 12:43:00 (cache: 30 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000296.npz (15832.4s total | fetch=15802.3s project=2.0s smooth=20.9s | cache hits=0 misses=15)
+[5/110] PIREP at (42.47, -86.11) FL34000 2018-08-01 12:46:00 (cache: 45 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000294.npz (1120.3s total | fetch=1118.1s project=0.1s smooth=1.4s | cache hits=14 misses=1)
+[6/110] PIREP at (57.04, -135.36) FL1500 2018-08-01 13:25:00 (cache: 46 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000175.npz (9479.7s total | fetch=9463.6s project=1.1s smooth=11.1s | cache hits=7 misses=8)
+[7/110] PIREP at (36.44, -82.13) FL11000 2018-08-01 14:11:00 (cache: 54 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000282.npz (10658.1s total | fetch=10639.9s project=1.2s smooth=12.5s | cache hits=6 misses=9)
+[8/110] PIREP at (40.96, -75.54) FL8000 2018-08-01 15:05:00 (cache: 63 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000199.npz (13094.9s total | fetch=13072.4s project=1.5s smooth=15.5s | cache hits=4 misses=11)
+[9/110] PIREP at (42.77, -88.30) FL3000 2018-08-01 15:55:00 (cache: 74 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000281.npz (11421.6s total | fetch=11401.4s project=1.4s smooth=14.0s | cache hits=5 misses=10)
+[10/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000001.npz (already exists)
+[11/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000002.npz (already exists)
+[12/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000003.npz (already exists)
+[13/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000004.npz (already exists)
+[14/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000005.npz (already exists)
+[15/110] PIREP at (63.22, -148.95) FL3000 2018-08-02 01:27:00 (cache: 84 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000251.npz (11461.6s total | fetch=11431.6s project=2.0s smooth=20.8s | cache hits=0 misses=15)
+[16/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000006.npz (already exists)
+[17/110] SKIPPING /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000007.npz (already exists)
+[18/110] PIREP at (60.07, -144.87) FL35000 2018-08-02 10:25:00 (cache: 99 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_08/0000231.npz (174.2s total | fetch=144.3s project=2.0s smooth=20.8s | cache hits=0 misses=15)
+[19/110] PIREP at (38.47, -82.61) FL22000 2018-08-02 11:08:00 (cache: 114 images)

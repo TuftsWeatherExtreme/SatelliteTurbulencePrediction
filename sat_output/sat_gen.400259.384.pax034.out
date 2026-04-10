@@ -1,0 +1,48 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2020/03 chunk [440:550]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/03_turb_pireps.csv
+Processing chunk [440:550] (110 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/03_turb_pireps.csv
+[1/110] PIREP at (39.42, -84.84) FL33000 2020-03-16 01:56:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000546.npz (205.0s total | fetch=174.4s project=2.0s smooth=21.3s | cache hits=0 misses=15)
+[2/110] PIREP at (40.69, -112.06) FL11000 2020-03-16 02:30:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000464.npz (93.8s total | fetch=79.5s project=0.9s smooth=9.9s | cache hits=8 misses=7)
+[3/110] PIREP at (37.96, -105.11) FL35000 2020-03-16 02:48:00 (cache: 22 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000229.npz (48.2s total | fetch=42.0s project=0.4s smooth=4.3s | cache hits=12 misses=3)
+[4/110] PIREP at (37.96, -105.11) FL37000 2020-03-16 02:48:00 (cache: 25 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000230.npz (0.2s total | fetch=0.0s project=0.0s smooth=0.0s | cache hits=15 misses=0)
+[5/110] PIREP at (19.86, -156.12) FL5500 2020-03-16 04:08:00 (cache: 25 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000358.npz (162.5s total | fetch=132.4s project=2.0s smooth=21.1s | cache hits=0 misses=15)
+[6/110] PIREP at (31.57, -94.75) FL41000 2020-03-16 08:05:00 (cache: 40 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000680.npz (202.2s total | fetch=171.7s project=2.0s smooth=21.2s | cache hits=0 misses=15)
+[7/110] PIREP at (36.58, -85.17) FL33000 2020-03-16 09:01:00 (cache: 55 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000608.npz (112.8s total | fetch=90.6s project=1.5s smooth=15.5s | cache hits=4 misses=11)
+[8/110] PIREP at (39.81, -86.37) FL24000 2020-03-16 10:58:00 (cache: 66 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000590.npz (187.3s total | fetch=156.8s project=2.0s smooth=21.3s | cache hits=0 misses=15)
+[9/110] PIREP at (28.74, -81.67) FL10000 2020-03-16 15:51:00 (cache: 81 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000554.npz (14549.8s total | fetch=14519.4s project=2.0s smooth=21.1s | cache hits=0 misses=15)
+[10/110] PIREP at (29.08, -98.72) FL15000 2020-03-16 17:11:00 (cache: 96 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000231.npz (16219.8s total | fetch=16189.4s project=2.0s smooth=21.1s | cache hits=0 misses=15)
+[11/110] PIREP at (26.68, -80.10) FL4000 2020-03-16 17:41:00 (cache: 111 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000369.npz (6641.2s total | fetch=6628.9s project=0.8s smooth=8.4s | cache hits=9 misses=6)
+[12/110] PIREP at (34.95, -120.52) FL23000 2020-03-16 18:33:00 (cache: 117 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000232.npz (11311.4s total | fetch=11291.2s project=1.3s smooth=14.0s | cache hits=5 misses=10)
+[13/110] PIREP at (34.95, -120.52) FL23000 2020-03-16 18:33:00 (cache: 127 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000233.npz (0.2s total | fetch=0.0s project=0.0s smooth=0.0s | cache hits=15 misses=0)
+[14/110] PIREP at (34.95, -120.52) FL23000 2020-03-16 18:33:00 (cache: 127 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000234.npz (0.2s total | fetch=0.0s project=0.0s smooth=0.0s | cache hits=15 misses=0)
+[15/110] PIREP at (48.69, -122.73) FL2500 2020-03-16 18:46:00 (cache: 127 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000235.npz (3711.4s total | fetch=3705.3s project=0.4s smooth=4.2s | cache hits=12 misses=3)
+[16/110] PIREP at (34.74, -118.24) FL21000 2020-03-16 21:03:00 (cache: 130 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000236.npz (17386.6s total | fetch=17356.4s project=2.0s smooth=21.0s | cache hits=0 misses=15)
+[17/110] PIREP at (34.74, -118.24) FL21000 2020-03-16 21:03:00 (cache: 145 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000237.npz (0.2s total | fetch=0.0s project=0.0s smooth=0.0s | cache hits=15 misses=0)
+[18/110] PIREP at (67.34, -150.22) FL37000 2020-03-16 21:36:00 (cache: 145 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_03/0000543.npz (7667.1s total | fetch=7653.0s project=0.9s smooth=9.8s | cache hits=8 misses=7)
+[19/110] PIREP at (54.31, -115.84) FL6500 2020-03-16 23:15:00 (cache: 152 images)

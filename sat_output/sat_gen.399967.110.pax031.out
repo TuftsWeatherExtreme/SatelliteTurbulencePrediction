@@ -1,0 +1,1045 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2017/12 chunk [0:110]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2017/12_turb_pireps.csv
+Processing chunk [0:110] (110 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2017/12_turb_pireps.csv
+[1/110] PIREP at (35.42, -80.15) FL3500 2017-12-01 01:05:00 (cache: 0 images)
+  WARNING: Failed to fetch image at 2017-12-01 01:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/00
+  WARNING: Failed to fetch image at 2017-12-01 01:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/00
+  WARNING: Failed to fetch image at 2017-12-01 00:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-12-01 00:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/23
+  WARNING: Failed to fetch image at 2017-11-30 23:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/334/22
+  SKIPPED: no frames fetched
+[2/110] PIREP at (35.12, -115.99) FL27000 2017-12-01 03:16:00 (cache: 15 images)
+  WARNING: Failed to fetch image at 2017-12-01 03:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 03:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 03:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 03:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 02:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  WARNING: Failed to fetch image at 2017-12-01 02:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/01
+  SKIPPED: no frames fetched
+[3/110] PIREP at (34.59, -113.18) FL28000 2017-12-01 04:52:00 (cache: 30 images)
+  WARNING: Failed to fetch image at 2017-12-01 04:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 04:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  WARNING: Failed to fetch image at 2017-12-01 03:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 03:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 03:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  WARNING: Failed to fetch image at 2017-12-01 03:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/02
+  SKIPPED: no frames fetched
+[4/110] PIREP at (37.62, -40.72) FL33000 2017-12-01 05:30:00 (cache: 45 images)
+  WARNING: Failed to fetch image at 2017-12-01 05:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 05:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 05:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 05:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 05:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 05:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 05:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/04
+  WARNING: Failed to fetch image at 2017-12-01 04:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/03
+  SKIPPED: no frames fetched
+[5/110] PIREP at (34.66, -108.38) FL43000 2017-12-01 13:49:00 (cache: 53 images)
+  WARNING: Failed to fetch image at 2017-12-01 13:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:34:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:29:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:19:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:14:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:09:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:04:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 12:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/11
+  WARNING: Failed to fetch image at 2017-12-01 12:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/11
+  WARNING: Failed to fetch image at 2017-12-01 12:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/11
+  WARNING: Failed to fetch image at 2017-12-01 12:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/11
+  WARNING: Failed to fetch image at 2017-12-01 12:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/11
+  SKIPPED: no frames fetched
+[6/110] PIREP at (45.45, -98.42) FL41000 2017-12-01 14:37:00 (cache: 68 images)
+  WARNING: Failed to fetch image at 2017-12-01 14:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 14:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/13
+  WARNING: Failed to fetch image at 2017-12-01 13:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  WARNING: Failed to fetch image at 2017-12-01 13:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/12
+  SKIPPED: no frames fetched
+[7/110] PIREP at (38.96, -104.63) FL11000 2017-12-01 17:00:00 (cache: 78 images)
+  WARNING: Failed to fetch image at 2017-12-01 17:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  WARNING: Failed to fetch image at 2017-12-01 16:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 16:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/15
+  WARNING: Failed to fetch image at 2017-12-01 15:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/14
+  WARNING: Failed to fetch image at 2017-12-01 15:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/14
+  SKIPPED: no frames fetched
+[8/110] PIREP at (64.84, -152.10) FL8000 2017-12-01 18:40:00 (cache: 93 images)
+  WARNING: Failed to fetch image at 2017-12-01 18:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 17:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  WARNING: Failed to fetch image at 2017-12-01 17:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  WARNING: Failed to fetch image at 2017-12-01 17:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  WARNING: Failed to fetch image at 2017-12-01 17:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  WARNING: Failed to fetch image at 2017-12-01 17:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  WARNING: Failed to fetch image at 2017-12-01 17:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/16
+  SKIPPED: no frames fetched
+[9/110] PIREP at (55.46, -132.39) FL900 2017-12-01 19:18:00 (cache: 108 images)
+  WARNING: Failed to fetch image at 2017-12-01 19:18:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 19:13:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 19:08:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 19:03:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 18:58:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:53:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  WARNING: Failed to fetch image at 2017-12-01 18:48:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/17
+  SKIPPED: no frames fetched
+[10/110] PIREP at (37.69, -117.91) FL31000 2017-12-01 19:33:00 (cache: 115 images)
+  WARNING: Failed to fetch image at 2017-12-01 19:33:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 19:28:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 19:23:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  SKIPPED: no frames fetched
+[11/110] PIREP at (39.54, -77.09) FL4500 2017-12-01 19:37:00 (cache: 118 images)
+  WARNING: Failed to fetch image at 2017-12-01 19:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  SKIPPED: no frames fetched
+[12/110] PIREP at (36.34, -100.71) FL33000 2017-12-01 21:03:00 (cache: 119 images)
+  WARNING: Failed to fetch image at 2017-12-01 21:03:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/20
+  WARNING: Failed to fetch image at 2017-12-01 20:58:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:53:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:48:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:43:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:38:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:33:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:28:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:23:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:18:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:13:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:08:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 20:03:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/19
+  WARNING: Failed to fetch image at 2017-12-01 19:58:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  WARNING: Failed to fetch image at 2017-12-01 19:53:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/18
+  SKIPPED: no frames fetched
+[13/110] PIREP at (32.38, -96.29) FL40000 2017-12-02 00:36:00 (cache: 134 images)
+  WARNING: Failed to fetch image at 2017-12-02 00:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-02 00:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/23
+  WARNING: Failed to fetch image at 2017-12-01 23:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  WARNING: Failed to fetch image at 2017-12-01 23:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  WARNING: Failed to fetch image at 2017-12-01 23:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  WARNING: Failed to fetch image at 2017-12-01 23:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  WARNING: Failed to fetch image at 2017-12-01 23:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  WARNING: Failed to fetch image at 2017-12-01 23:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  WARNING: Failed to fetch image at 2017-12-01 23:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/335/22
+  SKIPPED: no frames fetched
+[14/110] PIREP at (39.99, -87.25) FL34000 2017-12-02 12:15:00 (cache: 149 images)
+  WARNING: Failed to fetch image at 2017-12-02 12:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 11:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  WARNING: Failed to fetch image at 2017-12-02 11:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/10
+  SKIPPED: no frames fetched
+[15/110] PIREP at (42.97, -84.21) FL10000 2017-12-02 12:54:00 (cache: 164 images)
+  WARNING: Failed to fetch image at 2017-12-02 12:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:34:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:29:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  WARNING: Failed to fetch image at 2017-12-02 12:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/11
+  SKIPPED: no frames fetched
+[16/110] PIREP at (55.03, 179.50) FL33000 2017-12-02 16:45:00 (cache: 171 images)
+  WARNING: Failed to fetch image at 2017-12-02 16:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 16:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  WARNING: Failed to fetch image at 2017-12-02 15:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/14
+  WARNING: Failed to fetch image at 2017-12-02 15:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/14
+  WARNING: Failed to fetch image at 2017-12-02 15:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/14
+  WARNING: Failed to fetch image at 2017-12-02 15:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/14
+  WARNING: Failed to fetch image at 2017-12-02 15:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/14
+  SKIPPED: no frames fetched
+[17/110] PIREP at (39.91, -105.12) FL6500 2017-12-02 16:52:00 (cache: 186 images)
+  WARNING: Failed to fetch image at 2017-12-02 16:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  SKIPPED: no frames fetched
+[18/110] PIREP at (35.11, -110.90) FL32000 2017-12-02 17:48:00 (cache: 187 images)
+  WARNING: Failed to fetch image at 2017-12-02 17:48:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:43:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:38:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:33:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:28:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:23:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:18:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:13:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:08:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:03:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 16:58:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/15
+  SKIPPED: no frames fetched
+[19/110] PIREP at (27.15, -81.73) FL2500 2017-12-02 17:59:00 (cache: 198 images)
+  WARNING: Failed to fetch image at 2017-12-02 17:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  WARNING: Failed to fetch image at 2017-12-02 17:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/16
+  SKIPPED: no frames fetched
+[20/110] PIREP at (38.35, -84.45) FL3100 2017-12-02 18:15:00 (cache: 200 images)
+  WARNING: Failed to fetch image at 2017-12-02 18:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  SKIPPED: no frames fetched
+[21/110] PIREP at (35.67, -120.63) FL5500 2017-12-02 18:57:00 (cache: 204 images)
+  WARNING: Failed to fetch image at 2017-12-02 18:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  WARNING: Failed to fetch image at 2017-12-02 18:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/17
+  SKIPPED: no frames fetched
+[22/110] PIREP at (44.74, -91.57) FL27000 2017-12-02 20:00:00 (cache: 212 images)
+  WARNING: Failed to fetch image at 2017-12-02 20:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/19
+  WARNING: Failed to fetch image at 2017-12-02 19:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  WARNING: Failed to fetch image at 2017-12-02 19:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/18
+  SKIPPED: no frames fetched
+[23/110] PIREP at (32.40, -88.32) FL39000 2017-12-02 22:35:00 (cache: 225 images)
+  WARNING: Failed to fetch image at 2017-12-02 22:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 21:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  WARNING: Failed to fetch image at 2017-12-02 21:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  WARNING: Failed to fetch image at 2017-12-02 21:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  WARNING: Failed to fetch image at 2017-12-02 21:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  WARNING: Failed to fetch image at 2017-12-02 21:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  WARNING: Failed to fetch image at 2017-12-02 21:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  WARNING: Failed to fetch image at 2017-12-02 21:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/20
+  SKIPPED: no frames fetched
+[24/110] PIREP at (34.61, -101.96) FL43000 2017-12-03 00:02:00 (cache: 240 images)
+  WARNING: Failed to fetch image at 2017-12-03 00:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-02 23:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 23:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/22
+  WARNING: Failed to fetch image at 2017-12-02 22:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  WARNING: Failed to fetch image at 2017-12-02 22:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/21
+  SKIPPED: no frames fetched
+[25/110] PIREP at (61.17, -148.78) FL34000 2017-12-03 00:15:00 (cache: 255 images)
+  WARNING: Failed to fetch image at 2017-12-03 00:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  SKIPPED: no frames fetched
+[26/110] PIREP at (42.46, -73.40) FL29000 2017-12-03 01:11:00 (cache: 258 images)
+  WARNING: Failed to fetch image at 2017-12-03 01:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/00
+  WARNING: Failed to fetch image at 2017-12-03 01:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/00
+  WARNING: Failed to fetch image at 2017-12-03 01:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/00
+  WARNING: Failed to fetch image at 2017-12-03 00:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  WARNING: Failed to fetch image at 2017-12-03 00:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/336/23
+  SKIPPED: no frames fetched
+[27/110] PIREP at (38.70, -121.15) FL26000 2017-12-03 13:24:00 (cache: 269 images)
+  WARNING: Failed to fetch image at 2017-12-03 13:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/12
+  WARNING: Failed to fetch image at 2017-12-03 13:19:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/12
+  WARNING: Failed to fetch image at 2017-12-03 13:14:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/12
+  WARNING: Failed to fetch image at 2017-12-03 13:09:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/12
+  WARNING: Failed to fetch image at 2017-12-03 13:04:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/12
+  WARNING: Failed to fetch image at 2017-12-03 12:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:34:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:29:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:19:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  WARNING: Failed to fetch image at 2017-12-03 12:14:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/11
+  SKIPPED: no frames fetched
+[28/110] PIREP at (34.86, -119.44) FL37000 2017-12-03 15:33:00 (cache: 284 images)
+  WARNING: Failed to fetch image at 2017-12-03 15:33:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 15:28:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 15:23:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 15:18:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 15:13:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 15:08:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 15:03:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/14
+  WARNING: Failed to fetch image at 2017-12-03 14:58:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:53:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:48:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:43:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:38:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:33:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:28:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  WARNING: Failed to fetch image at 2017-12-03 14:23:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/13
+  SKIPPED: no frames fetched
+[29/110] PIREP at (37.37, -118.36) FL36000 2017-12-03 17:55:00 (cache: 299 images)
+  WARNING: Failed to fetch image at 2017-12-03 17:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 17:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/16
+  WARNING: Failed to fetch image at 2017-12-03 16:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/15
+  WARNING: Failed to fetch image at 2017-12-03 16:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/15
+  WARNING: Failed to fetch image at 2017-12-03 16:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/15
+  SKIPPED: no frames fetched
+[30/110] PIREP at (36.31, -115.19) FL5000 2017-12-03 18:22:00 (cache: 314 images)
+  WARNING: Failed to fetch image at 2017-12-03 18:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  SKIPPED: no frames fetched
+[31/110] PIREP at (36.31, -115.19) FL5000 2017-12-03 18:22:00 (cache: 319 images)
+  SKIPPED: no frames fetched
+[32/110] PIREP at (21.36, -157.92) FL1500 2017-12-03 19:54:00 (cache: 319 images)
+  WARNING: Failed to fetch image at 2017-12-03 19:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:34:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:29:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:19:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:14:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:09:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 19:04:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  WARNING: Failed to fetch image at 2017-12-03 18:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  WARNING: Failed to fetch image at 2017-12-03 18:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/17
+  SKIPPED: no frames fetched
+[33/110] PIREP at (43.20, -110.84) FL24000 2017-12-03 20:30:00 (cache: 334 images)
+  WARNING: Failed to fetch image at 2017-12-03 20:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 20:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 20:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 20:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 20:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 20:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 20:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/19
+  WARNING: Failed to fetch image at 2017-12-03 19:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/18
+  SKIPPED: no frames fetched
+[34/110] PIREP at (41.50, -83.19) FL36000 2017-12-03 22:32:00 (cache: 342 images)
+  WARNING: Failed to fetch image at 2017-12-03 22:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 21:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  WARNING: Failed to fetch image at 2017-12-03 21:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/20
+  SKIPPED: no frames fetched
+[35/110] PIREP at (34.33, -101.52) FL34000 2017-12-03 23:11:00 (cache: 357 images)
+  WARNING: Failed to fetch image at 2017-12-03 23:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/22
+  WARNING: Failed to fetch image at 2017-12-03 23:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/22
+  WARNING: Failed to fetch image at 2017-12-03 23:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/22
+  WARNING: Failed to fetch image at 2017-12-03 22:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  WARNING: Failed to fetch image at 2017-12-03 22:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/21
+  SKIPPED: no frames fetched
+[36/110] PIREP at (34.44, -119.33) FL8500 2017-12-03 23:24:00 (cache: 365 images)
+  WARNING: Failed to fetch image at 2017-12-03 23:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/22
+  WARNING: Failed to fetch image at 2017-12-03 23:19:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/22
+  SKIPPED: no frames fetched
+[37/110] PIREP at (41.64, -111.83) FL10000 2017-12-04 01:15:00 (cache: 367 images)
+  WARNING: Failed to fetch image at 2017-12-04 01:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 00:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  WARNING: Failed to fetch image at 2017-12-04 00:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/337/23
+  SKIPPED: no frames fetched
+[38/110] PIREP at (38.79, -97.65) FL30000 2017-12-04 01:20:00 (cache: 382 images)
+  WARNING: Failed to fetch image at 2017-12-04 01:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  SKIPPED: no frames fetched
+[39/110] PIREP at (59.91, -154.85) FL34000 2017-12-04 01:50:00 (cache: 383 images)
+  WARNING: Failed to fetch image at 2017-12-04 01:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  WARNING: Failed to fetch image at 2017-12-04 01:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  SKIPPED: no frames fetched
+[40/110] PIREP at (58.35, -134.57) FL2000 2017-12-04 03:09:00 (cache: 389 images)
+  WARNING: Failed to fetch image at 2017-12-04 03:09:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/02
+  WARNING: Failed to fetch image at 2017-12-04 03:04:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/02
+  WARNING: Failed to fetch image at 2017-12-04 02:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:34:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:29:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:19:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:14:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:09:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 02:04:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/01
+  WARNING: Failed to fetch image at 2017-12-04 01:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/00
+  SKIPPED: no frames fetched
+[41/110] PIREP at (60.11, -140.08) FL36000 2017-12-04 09:01:00 (cache: 404 images)
+  WARNING: Failed to fetch image at 2017-12-04 09:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 08:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 08:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/07
+  WARNING: Failed to fetch image at 2017-12-04 07:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/06
+  WARNING: Failed to fetch image at 2017-12-04 07:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/06
+  SKIPPED: no frames fetched
+[42/110] PIREP at (59.53, -137.94) FL36000 2017-12-04 09:12:00 (cache: 419 images)
+  WARNING: Failed to fetch image at 2017-12-04 09:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  SKIPPED: no frames fetched
+[43/110] PIREP at (60.09, -143.49) FL33000 2017-12-04 10:12:00 (cache: 421 images)
+  WARNING: Failed to fetch image at 2017-12-04 10:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 09:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  WARNING: Failed to fetch image at 2017-12-04 09:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/08
+  SKIPPED: no frames fetched
+[44/110] PIREP at (61.96, -147.89) FL31000 2017-12-04 10:45:00 (cache: 433 images)
+  WARNING: Failed to fetch image at 2017-12-04 10:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  SKIPPED: no frames fetched
+[45/110] PIREP at (61.52, -140.31) FL31000 2017-12-04 11:06:00 (cache: 440 images)
+  WARNING: Failed to fetch image at 2017-12-04 11:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/10
+  WARNING: Failed to fetch image at 2017-12-04 11:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/10
+  WARNING: Failed to fetch image at 2017-12-04 10:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  WARNING: Failed to fetch image at 2017-12-04 10:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/09
+  SKIPPED: no frames fetched
+[46/110] PIREP at (33.70, -85.73) FL11000 2017-12-04 13:12:00 (cache: 444 images)
+  WARNING: Failed to fetch image at 2017-12-04 13:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/12
+  WARNING: Failed to fetch image at 2017-12-04 13:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/12
+  WARNING: Failed to fetch image at 2017-12-04 13:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/12
+  WARNING: Failed to fetch image at 2017-12-04 12:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  WARNING: Failed to fetch image at 2017-12-04 12:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/11
+  SKIPPED: no frames fetched
+[47/110] PIREP at (42.76, -73.80) FL36000 2017-12-04 13:20:00 (cache: 459 images)
+  WARNING: Failed to fetch image at 2017-12-04 13:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/12
+  WARNING: Failed to fetch image at 2017-12-04 13:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/12
+  SKIPPED: no frames fetched
+[48/110] PIREP at (31.60, -104.94) FL32000 2017-12-04 15:31:00 (cache: 461 images)
+  WARNING: Failed to fetch image at 2017-12-04 15:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 14:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  WARNING: Failed to fetch image at 2017-12-04 14:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/13
+  SKIPPED: no frames fetched
+[49/110] PIREP at (34.24, -111.27) FL23000 2017-12-04 16:25:00 (cache: 476 images)
+  WARNING: Failed to fetch image at 2017-12-04 16:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 15:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  WARNING: Failed to fetch image at 2017-12-04 15:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/14
+  SKIPPED: no frames fetched
+[50/110] PIREP at (39.65, -122.68) FL10000 2017-12-04 17:06:00 (cache: 487 images)
+  WARNING: Failed to fetch image at 2017-12-04 17:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 17:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 16:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  WARNING: Failed to fetch image at 2017-12-04 16:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/15
+  SKIPPED: no frames fetched
+[51/110] PIREP at (38.82, -120.05) FL14500 2017-12-04 17:25:00 (cache: 495 images)
+  WARNING: Failed to fetch image at 2017-12-04 17:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 17:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 17:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 17:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  SKIPPED: no frames fetched
+[52/110] PIREP at (41.31, -95.90) FL18000 2017-12-04 17:31:00 (cache: 499 images)
+  WARNING: Failed to fetch image at 2017-12-04 17:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  SKIPPED: no frames fetched
+[53/110] PIREP at (61.67, -122.33) FL37000 2017-12-04 17:35:00 (cache: 500 images)
+  WARNING: Failed to fetch image at 2017-12-04 17:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  SKIPPED: no frames fetched
+[54/110] PIREP at (35.89, -121.43) FL30000 2017-12-04 17:51:00 (cache: 501 images)
+  WARNING: Failed to fetch image at 2017-12-04 17:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 17:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  WARNING: Failed to fetch image at 2017-12-04 17:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  SKIPPED: no frames fetched
+[55/110] PIREP at (63.84, -143.97) FL4500 2017-12-04 18:42:00 (cache: 504 images)
+  WARNING: Failed to fetch image at 2017-12-04 18:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 18:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  WARNING: Failed to fetch image at 2017-12-04 17:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/16
+  SKIPPED: no frames fetched
+[56/110] PIREP at (39.09, -86.50) FL4500 2017-12-04 18:49:00 (cache: 514 images)
+  WARNING: Failed to fetch image at 2017-12-04 18:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  SKIPPED: no frames fetched
+[57/110] PIREP at (33.03, -96.24) FL2000 2017-12-04 18:52:00 (cache: 515 images)
+  WARNING: Failed to fetch image at 2017-12-04 18:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  SKIPPED: no frames fetched
+[58/110] PIREP at (37.24, -93.39) FL3000 2017-12-04 19:27:00 (cache: 516 images)
+  WARNING: Failed to fetch image at 2017-12-04 19:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 18:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/17
+  SKIPPED: no frames fetched
+[59/110] PIREP at (37.76, -89.80) FL37000 2017-12-04 19:59:00 (cache: 523 images)
+  WARNING: Failed to fetch image at 2017-12-04 19:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:49:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:39:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  WARNING: Failed to fetch image at 2017-12-04 19:34:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/18
+  SKIPPED: no frames fetched
+[60/110] PIREP at (38.97, -90.05) FL2400 2017-12-04 20:06:00 (cache: 529 images)
+  WARNING: Failed to fetch image at 2017-12-04 20:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/19
+  WARNING: Failed to fetch image at 2017-12-04 20:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/19
+  SKIPPED: no frames fetched
+[61/110] PIREP at (34.29, -118.56) FL4000 2017-12-04 21:50:00 (cache: 531 images)
+  WARNING: Failed to fetch image at 2017-12-04 21:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 21:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  WARNING: Failed to fetch image at 2017-12-04 20:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/19
+  WARNING: Failed to fetch image at 2017-12-04 20:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/19
+  WARNING: Failed to fetch image at 2017-12-04 20:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/19
+  WARNING: Failed to fetch image at 2017-12-04 20:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/19
+  SKIPPED: no frames fetched
+[62/110] PIREP at (59.75, -130.15) FL43000 2017-12-04 22:35:00 (cache: 546 images)
+  WARNING: Failed to fetch image at 2017-12-04 22:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 21:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/20
+  SKIPPED: no frames fetched
+[63/110] PIREP at (33.21, -84.49) FL34000 2017-12-04 22:37:00 (cache: 555 images)
+  SKIPPED: no frames fetched
+[64/110] PIREP at (60.83, -138.18) FL36000 2017-12-04 22:55:00 (cache: 555 images)
+  WARNING: Failed to fetch image at 2017-12-04 22:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  WARNING: Failed to fetch image at 2017-12-04 22:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/21
+  SKIPPED: no frames fetched
+[65/110] PIREP at (37.71, -121.81) FL3000 2017-12-05 00:25:00 (cache: 559 images)
+  WARNING: Failed to fetch image at 2017-12-05 00:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-04 23:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  WARNING: Failed to fetch image at 2017-12-04 23:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/22
+  SKIPPED: no frames fetched
+[66/110] PIREP at (34.98, -119.71) FL23000 2017-12-05 00:35:00 (cache: 574 images)
+  WARNING: Failed to fetch image at 2017-12-05 00:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  SKIPPED: no frames fetched
+[67/110] PIREP at (33.96, -117.54) FL2000 2017-12-05 00:44:00 (cache: 576 images)
+  WARNING: Failed to fetch image at 2017-12-05 00:44:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  SKIPPED: no frames fetched
+[68/110] PIREP at (37.70, -120.87) FL28000 2017-12-05 00:51:00 (cache: 577 images)
+  WARNING: Failed to fetch image at 2017-12-05 00:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  WARNING: Failed to fetch image at 2017-12-05 00:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  SKIPPED: no frames fetched
+[69/110] PIREP at (34.35, -118.33) FL3000 2017-12-05 00:55:00 (cache: 579 images)
+  WARNING: Failed to fetch image at 2017-12-05 00:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/338/23
+  SKIPPED: no frames fetched
+[70/110] PIREP at (34.26, -118.41) FL3000 2017-12-05 00:55:00 (cache: 580 images)
+  SKIPPED: no frames fetched
+[71/110] PIREP at (33.99, -116.54) FL5500 2017-12-05 01:00:00 (cache: 580 images)
+  WARNING: Failed to fetch image at 2017-12-05 01:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  SKIPPED: no frames fetched
+[72/110] PIREP at (60.67, -137.00) FL36000 2017-12-05 01:10:00 (cache: 581 images)
+  WARNING: Failed to fetch image at 2017-12-05 01:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  SKIPPED: no frames fetched
+[73/110] PIREP at (37.15, -119.15) FL24000 2017-12-05 02:25:00 (cache: 583 images)
+  WARNING: Failed to fetch image at 2017-12-05 02:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 01:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  WARNING: Failed to fetch image at 2017-12-05 01:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/00
+  SKIPPED: no frames fetched
+[74/110] PIREP at (32.96, -96.97) FL5000 2017-12-05 03:35:00 (cache: 598 images)
+  WARNING: Failed to fetch image at 2017-12-05 03:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 02:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  WARNING: Failed to fetch image at 2017-12-05 02:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/01
+  SKIPPED: no frames fetched
+[75/110] PIREP at (61.38, -146.28) FL29000 2017-12-05 03:36:00 (cache: 612 images)
+  SKIPPED: no frames fetched
+[76/110] PIREP at (32.80, -96.70) FL4000 2017-12-05 04:20:00 (cache: 612 images)
+  WARNING: Failed to fetch image at 2017-12-05 04:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 03:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  WARNING: Failed to fetch image at 2017-12-05 03:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/02
+  SKIPPED: no frames fetched
+[77/110] PIREP at (32.79, -96.78) FL4000 2017-12-05 04:22:00 (cache: 621 images)
+  SKIPPED: no frames fetched
+[78/110] PIREP at (37.08, -120.78) FL11000 2017-12-05 04:30:00 (cache: 621 images)
+  WARNING: Failed to fetch image at 2017-12-05 04:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  SKIPPED: no frames fetched
+[79/110] PIREP at (60.83, -138.35) FL27000 2017-12-05 04:45:00 (cache: 623 images)
+  WARNING: Failed to fetch image at 2017-12-05 04:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  WARNING: Failed to fetch image at 2017-12-05 04:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/03
+  SKIPPED: no frames fetched
+[80/110] PIREP at (38.26, -119.24) FL28000 2017-12-05 07:12:00 (cache: 626 images)
+  WARNING: Failed to fetch image at 2017-12-05 07:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/06
+  WARNING: Failed to fetch image at 2017-12-05 07:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/06
+  WARNING: Failed to fetch image at 2017-12-05 07:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/06
+  WARNING: Failed to fetch image at 2017-12-05 06:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  WARNING: Failed to fetch image at 2017-12-05 06:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/05
+  SKIPPED: no frames fetched
+[81/110] PIREP at (49.21, -102.11) FL31000 2017-12-05 10:25:00 (cache: 641 images)
+  WARNING: Failed to fetch image at 2017-12-05 10:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 09:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  WARNING: Failed to fetch image at 2017-12-05 09:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/08
+  SKIPPED: no frames fetched
+[82/110] PIREP at (34.70, -83.00) FL27000 2017-12-05 11:27:00 (cache: 656 images)
+  WARNING: Failed to fetch image at 2017-12-05 11:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 10:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  WARNING: Failed to fetch image at 2017-12-05 10:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/09
+  SKIPPED: no frames fetched
+[83/110] PIREP at (35.79, -83.05) FL39000 2017-12-05 12:35:00 (cache: 668 images)
+  WARNING: Failed to fetch image at 2017-12-05 12:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 11:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  WARNING: Failed to fetch image at 2017-12-05 11:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/10
+  SKIPPED: no frames fetched
+[84/110] PIREP at (41.45, -86.51) FL22000 2017-12-05 12:45:00 (cache: 682 images)
+  WARNING: Failed to fetch image at 2017-12-05 12:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  SKIPPED: no frames fetched
+[85/110] PIREP at (25.81, -79.65) FL14000 2017-12-05 13:09:00 (cache: 684 images)
+  WARNING: Failed to fetch image at 2017-12-05 13:09:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  WARNING: Failed to fetch image at 2017-12-05 13:04:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  WARNING: Failed to fetch image at 2017-12-05 12:59:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  WARNING: Failed to fetch image at 2017-12-05 12:54:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/11
+  SKIPPED: no frames fetched
+[86/110] PIREP at (34.50, -102.88) FL36000 2017-12-05 13:16:00 (cache: 688 images)
+  WARNING: Failed to fetch image at 2017-12-05 13:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  WARNING: Failed to fetch image at 2017-12-05 13:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  SKIPPED: no frames fetched
+[87/110] PIREP at (41.17, -95.74) FL38000 2017-12-05 13:18:00 (cache: 690 images)
+  SKIPPED: no frames fetched
+[88/110] PIREP at (37.80, -93.61) FL40000 2017-12-05 13:24:00 (cache: 690 images)
+  WARNING: Failed to fetch image at 2017-12-05 13:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  SKIPPED: no frames fetched
+[89/110] PIREP at (34.22, -113.62) FL36000 2017-12-05 15:02:00 (cache: 691 images)
+  WARNING: Failed to fetch image at 2017-12-05 15:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 14:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 14:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/13
+  WARNING: Failed to fetch image at 2017-12-05 13:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  WARNING: Failed to fetch image at 2017-12-05 13:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/12
+  SKIPPED: no frames fetched
+[90/110] PIREP at (42.59, -112.07) FL38000 2017-12-05 15:45:00 (cache: 706 images)
+  WARNING: Failed to fetch image at 2017-12-05 15:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  SKIPPED: no frames fetched
+[91/110] PIREP at (39.92, -75.67) FL43000 2017-12-05 16:21:00 (cache: 715 images)
+  WARNING: Failed to fetch image at 2017-12-05 16:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 15:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  WARNING: Failed to fetch image at 2017-12-05 15:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/14
+  SKIPPED: no frames fetched
+[92/110] PIREP at (37.39, -118.76) FL30000 2017-12-05 16:25:00 (cache: 722 images)
+  WARNING: Failed to fetch image at 2017-12-05 16:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  SKIPPED: no frames fetched
+[93/110] PIREP at (37.80, -119.01) FL30000 2017-12-05 16:38:00 (cache: 723 images)
+  WARNING: Failed to fetch image at 2017-12-05 16:38:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:33:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  SKIPPED: no frames fetched
+[94/110] PIREP at (37.80, -119.01) FL30000 2017-12-05 16:40:00 (cache: 725 images)
+  WARNING: Failed to fetch image at 2017-12-05 16:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  SKIPPED: no frames fetched
+[95/110] PIREP at (37.59, -84.88) FL15000 2017-12-05 16:57:00 (cache: 726 images)
+  WARNING: Failed to fetch image at 2017-12-05 16:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  WARNING: Failed to fetch image at 2017-12-05 16:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/15
+  SKIPPED: no frames fetched
+[96/110] PIREP at (37.59, -84.88) FL15000 2017-12-05 16:57:00 (cache: 729 images)
+  SKIPPED: no frames fetched
+[97/110] PIREP at (70.63, -159.99) FL0 2017-12-05 17:16:00 (cache: 729 images)
+  WARNING: Failed to fetch image at 2017-12-05 17:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  SKIPPED: no frames fetched
+[98/110] PIREP at (38.45, -83.18) FL7500 2017-12-05 17:29:00 (cache: 733 images)
+  WARNING: Failed to fetch image at 2017-12-05 17:29:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:24:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  SKIPPED: no frames fetched
+[99/110] PIREP at (37.47, -121.87) FL3000 2017-12-05 17:36:00 (cache: 735 images)
+  WARNING: Failed to fetch image at 2017-12-05 17:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  SKIPPED: no frames fetched
+[100/110] PIREP at (39.44, -106.90) FL32000 2017-12-05 17:41:00 (cache: 737 images)
+  WARNING: Failed to fetch image at 2017-12-05 17:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  SKIPPED: no frames fetched
+[101/110] PIREP at (48.37, -89.32) FL1000 2017-12-05 18:15:00 (cache: 738 images)
+  WARNING: Failed to fetch image at 2017-12-05 18:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 17:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  WARNING: Failed to fetch image at 2017-12-05 17:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/16
+  SKIPPED: no frames fetched
+[102/110] PIREP at (35.43, -82.54) FL8000 2017-12-05 18:18:00 (cache: 745 images)
+  SKIPPED: no frames fetched
+[103/110] PIREP at (64.95, -151.03) FL8500 2017-12-05 18:20:00 (cache: 745 images)
+  WARNING: Failed to fetch image at 2017-12-05 18:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  SKIPPED: no frames fetched
+[104/110] PIREP at (37.91, -91.93) FL7500 2017-12-05 19:46:00 (cache: 746 images)
+  WARNING: Failed to fetch image at 2017-12-05 19:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 19:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/18
+  WARNING: Failed to fetch image at 2017-12-05 18:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  WARNING: Failed to fetch image at 2017-12-05 18:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/17
+  SKIPPED: no frames fetched
+[105/110] PIREP at (34.25, -82.16) FL38000 2017-12-05 19:49:00 (cache: 761 images)
+  SKIPPED: no frames fetched
+[106/110] PIREP at (33.84, -84.59) FL14000 2017-12-05 21:17:00 (cache: 761 images)
+  WARNING: Failed to fetch image at 2017-12-05 21:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:02:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 20:57:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:52:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:47:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:42:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:37:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:32:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:27:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:22:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:17:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:12:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  WARNING: Failed to fetch image at 2017-12-05 20:07:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/19
+  SKIPPED: no frames fetched
+[107/110] PIREP at (31.10, -88.49) FL4000 2017-12-05 22:45:00 (cache: 776 images)
+  WARNING: Failed to fetch image at 2017-12-05 22:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:30:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:25:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:20:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 22:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  WARNING: Failed to fetch image at 2017-12-05 21:55:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:50:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:45:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:40:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  WARNING: Failed to fetch image at 2017-12-05 21:35:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/20
+  SKIPPED: no frames fetched
+[108/110] PIREP at (34.21, -103.45) FL26000 2017-12-05 22:53:00 (cache: 791 images)
+  WARNING: Failed to fetch image at 2017-12-05 22:53:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  SKIPPED: no frames fetched
+[109/110] PIREP at (33.19, -84.43) FL3000 2017-12-05 23:56:00 (cache: 792 images)
+  WARNING: Failed to fetch image at 2017-12-05 23:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:51:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:46:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:41:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:36:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:31:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:26:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:21:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:16:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:11:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:06:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 23:01:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/22
+  WARNING: Failed to fetch image at 2017-12-05 22:56:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/21
+  SKIPPED: no frames fetched
+[110/110] PIREP at (34.20, -118.36) FL5000 2017-12-06 00:15:00 (cache: 805 images)
+  WARNING: Failed to fetch image at 2017-12-06 00:15:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/23
+  WARNING: Failed to fetch image at 2017-12-06 00:10:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/23
+  WARNING: Failed to fetch image at 2017-12-06 00:05:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/23
+  WARNING: Failed to fetch image at 2017-12-06 00:00:00: noaa-goes16/ABI-L2-MCMIPC/2017/339/23
+  SKIPPED: no frames fetched
+
+Done. Saved 0, skipped 0, failed 110 / 110 PIREPs in chunk. Total time: 1.2 min
+Unique satellite images in cache at exit: 809
+Python script exit code: 0
+All done!

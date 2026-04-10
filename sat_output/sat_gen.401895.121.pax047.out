@@ -1,0 +1,38 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2018/06 chunk [300:450]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2018/06_turb_pireps.csv
+Processing chunk [300:450] (70 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2018/06_turb_pireps.csv
+[1/70] PIREP at (41.10, -90.90) FL8000 2018-06-25 13:21:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000357.npz (5011.2s total | fetch=4985.2s project=2.2s smooth=17.1s | cache hits=0 misses=15)
+[2/70] PIREP at (36.28, -95.60) FL3000 2018-06-25 13:30:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000149.npz (840.2s total | fetch=836.5s project=0.3s smooth=2.3s | cache hits=13 misses=2)
+[3/70] PIREP at (40.85, -96.76) FL38000 2018-06-25 14:57:00 (cache: 17 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000284.npz (5985.2s total | fetch=5958.8s project=2.2s smooth=17.2s | cache hits=0 misses=15)
+[4/70] PIREP at (39.91, -98.36) FL34000 2018-06-25 14:58:00 (cache: 32 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000196.npz (0.1s total | fetch=0.0s project=0.0s smooth=0.0s | cache hits=15 misses=0)
+[5/70] PIREP at (31.34, -76.32) FL33000 2018-06-25 15:21:00 (cache: 32 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000228.npz (2043.4s total | fetch=2034.5s project=0.8s smooth=5.7s | cache hits=10 misses=5)
+[6/70] PIREP at (52.98, -117.35) FL5500 2018-06-25 15:58:00 (cache: 37 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000150.npz (3226.7s total | fetch=3214.5s project=1.0s smooth=7.9s | cache hits=8 misses=7)
+[7/70] PIREP at (42.22, -87.95) FL33000 2018-06-25 16:41:00 (cache: 44 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000358.npz (3998.3s total | fetch=3982.5s project=1.3s smooth=10.3s | cache hits=6 misses=9)
+[8/70] PIREP at (38.10, -85.58) FL41000 2018-06-25 19:01:00 (cache: 53 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000289.npz (7539.8s total | fetch=7513.6s project=2.2s smooth=17.1s | cache hits=0 misses=15)
+[9/70] PIREP at (43.12, -87.25) FL37000 2018-06-25 19:14:00 (cache: 68 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000362.npz (1011.4s total | fetch=1007.7s project=0.3s smooth=2.3s | cache hits=13 misses=2)
+[10/70] PIREP at (40.92, -88.62) FL35000 2018-06-25 20:43:00 (cache: 70 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000200.npz (8046.8s total | fetch=8020.5s project=2.3s smooth=17.0s | cache hits=0 misses=15)
+[11/70] PIREP at (21.10, -156.89) FL5000 2018-06-25 20:45:00 (cache: 85 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000296.npz (482.3s total | fetch=480.5s project=0.1s smooth=1.2s | cache hits=14 misses=1)
+[12/70] PIREP at (40.10, -105.19) FL7000 2018-06-26 13:51:00 (cache: 86 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000265.npz (8044.8s total | fetch=8018.2s project=2.3s smooth=17.2s | cache hits=0 misses=15)
+[13/70] PIREP at (43.54, -86.98) FL16000 2018-06-26 16:41:00 (cache: 101 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2018_06/0000220.npz (9828.8s total | fetch=9802.6s project=2.3s smooth=17.0s | cache hits=0 misses=15)
+[14/70] PIREP at (47.57, -64.35) FL38000 2018-06-26 20:17:00 (cache: 116 images)

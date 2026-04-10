@@ -1,0 +1,2 @@
+srun: error: Unable to create step for job 402465: Invalid generic resource (gres) specification
+slurmstepd: error: *** JOB 402465 ON pax001 CANCELLED AT 2026-04-06T09:58:25 ***

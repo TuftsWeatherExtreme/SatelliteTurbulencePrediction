@@ -1,0 +1,23 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Allocating resources with slurm...
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2020/11 chunk [150:300]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/11_turb_pireps.csv
+Processing chunk [150:300] (150 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2020/11_turb_pireps.csv
+[1/150] PIREP at (39.76, -119.91) FL10000 2020-11-13 17:45:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_11/0000062.npz (11401.4s total | fetch=11371.5s project=2.0s smooth=20.9s | cache hits=0 misses=15)
+[2/150] PIREP at (39.80, -119.89) FL10000 2020-11-13 18:00:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_11/0000063.npz (2348.9s total | fetch=2342.8s project=0.4s smooth=4.1s | cache hits=12 misses=3)
+[3/150] PIREP at (38.57, -118.78) FL9500 2020-11-13 19:00:00 (cache: 18 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_11/0000064.npz (11233.0s total | fetch=11209.3s project=1.5s smooth=16.5s | cache hits=3 misses=12)
+[4/150] PIREP at (35.08, -113.47) FL32000 2020-11-13 19:17:00 (cache: 30 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_11/0000066.npz (2707.0s total | fetch=2700.9s project=0.4s smooth=4.1s | cache hits=12 misses=3)
+[5/150] PIREP at (35.08, -113.47) FL32000 2020-11-13 19:17:00 (cache: 33 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2020_11/0000065.npz (0.2s total | fetch=0.0s project=0.0s smooth=0.0s | cache hits=15 misses=0)
+[6/150] PIREP at (39.76, -108.88) FL10500 2020-11-13 21:44:00 (cache: 33 images)

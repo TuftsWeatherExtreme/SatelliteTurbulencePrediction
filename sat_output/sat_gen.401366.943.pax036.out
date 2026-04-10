@@ -1,0 +1,12 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2024/11 chunk [330:440]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2024/11_turb_pireps.csv
+Processing chunk [330:440] (80 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2024/11_turb_pireps.csv
+[1/80] PIREP at (42.76, -73.80) FL31000 2024-11-23 16:00:00 (cache: 0 images)

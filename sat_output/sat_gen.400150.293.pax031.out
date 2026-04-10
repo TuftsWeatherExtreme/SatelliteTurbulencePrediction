@@ -1,0 +1,63 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2019/06 chunk [330:440]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2019/06_turb_pireps.csv
+Processing chunk [330:440] (38 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2019/06_turb_pireps.csv
+[1/38] PIREP at (43.63, -102.05) FL12000 2019-06-27 04:30:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2019_06/0000160.npz (135.0s total | fetch=104.5s project=2.0s smooth=21.2s | cache hits=0 misses=15)
+[2/38] PIREP at (34.05, -85.15) FL4500 2019-06-27 14:06:00 (cache: 15 images)
+  WARNING: Failed to fetch image at 2019-06-27 14:06:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 14:01:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:56:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:51:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:46:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:41:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:36:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:31:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:26:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:21:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:16:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:11:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:06:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 13:01:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2019_06/0000161.npz (727.4s total | fetch=722.6s project=0.1s smooth=1.4s | cache hits=0 misses=1)
+[3/38] PIREP at (43.42, -124.24) FL11000 2019-06-27 15:45:00 (cache: 30 images)
+  WARNING: Failed to fetch image at 2019-06-27 15:45:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:40:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:35:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:30:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:25:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:20:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:15:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:10:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:05:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:00:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 14:55:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 14:50:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 14:45:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 14:40:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 14:35:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  SKIPPED: no frames fetched
+[4/38] PIREP at (41.32, -91.31) FL34000 2019-06-27 16:13:00 (cache: 45 images)
+  WARNING: Failed to fetch image at 2019-06-27 16:13:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:08:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:03:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 15:58:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  WARNING: Failed to fetch image at 2019-06-27 15:53:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/14
+  SKIPPED: no frames fetched
+[5/38] PIREP at (35.88, -103.69) FL39000 2019-06-27 16:47:00 (cache: 50 images)
+  WARNING: Failed to fetch image at 2019-06-27 16:47:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:42:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:37:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:32:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:27:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:22:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  WARNING: Failed to fetch image at 2019-06-27 16:17:00: noaa-goes16/ABI-L2-MCMIPC/2019/178/15
+  SKIPPED: no frames fetched
+[6/38] PIREP at (44.91, -97.15) FL36000 2019-06-27 18:28:00 (cache: 57 images)

@@ -1,0 +1,22 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Processing 2024/03 chunk [220:330]
+Fetching satellite data for PIREPs in /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2024/03_turb_pireps.csv
+Processing chunk [220:330] (110 PIREPs) from /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/pireps/2024/03_turb_pireps.csv
+[1/110] PIREP at (20.82, -157.03) FL3000 2024-03-07 04:34:00 (cache: 0 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2024_03/0000106.npz (173.3s total | fetch=142.9s project=2.1s smooth=21.3s | cache hits=0 misses=15)
+[2/110] PIREP at (42.54, -72.01) FL15000 2024-03-07 11:04:00 (cache: 15 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2024_03/0000887.npz (231.1s total | fetch=200.6s project=2.0s smooth=21.3s | cache hits=0 misses=15)
+[3/110] PIREP at (43.43, -70.61) FL6000 2024-03-07 12:40:00 (cache: 30 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2024_03/0000107.npz (224.5s total | fetch=193.8s project=2.1s smooth=21.4s | cache hits=0 misses=15)
+[4/110] PIREP at (35.90, -83.89) FL24000 2024-03-07 13:06:00 (cache: 45 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2024_03/0000950.npz (85.9s total | fetch=75.4s project=0.7s smooth=7.2s | cache hits=10 misses=5)
+[5/110] PIREP at (43.94, -98.08) FL6000 2024-03-07 13:36:00 (cache: 50 images)
+  SAVED /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs/2024_03/0000637.npz (57.7s total | fetch=45.2s project=0.9s smooth=8.6s | cache hits=9 misses=6)
+[6/110] PIREP at (44.81, -68.83) FL700 2024-03-07 13:50:00 (cache: 56 images)
