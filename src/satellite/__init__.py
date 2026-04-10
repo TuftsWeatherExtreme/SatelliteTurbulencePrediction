@@ -5,6 +5,7 @@ import numpy as np
 import numpy.typing as npt
 from goes2go import GOES
 from xarray import DataArray, Dataset
+import s3fs
 
 
 def generate_timestamps(
@@ -106,6 +107,128 @@ def fetch_bands(data: Dataset, bands: list[int]) -> DataArray:
     if "t" not in da.dims:
         da = da.expand_dims("t")
     return da.transpose("t", "y", "x", "band")
+
+
+def radiance_to_brightness_temp(rad, fk1, fk2, bc1, bc2):
+    """
+    Convert radiance to brightness temperature using Planck function constants
+    from the L1b file metadata.
+
+    Parameters
+    ----------
+    rad: array - radiance values
+    fk1, fk2, bc1, bc2: float - Planck function constants from the file
+
+    Returns
+    -------
+    array of brightness temperatures in Kelvin
+    """
+    return (fk2 / np.log((fk1 / rad) + 1) - bc1) / bc2
+
+
+def fetch_l1b_bands(timestamp: dt.datetime, bands: list[int]) -> tuple:
+    """
+    Fetch individual L1b-RadC band files for GOES-16 CONUS and convert
+    radiance to brightness temperature. Much faster than downloading the
+    full CMI product since each band file is ~5-10 MB vs ~50-100 MB for CMI.
+
+    Parameters
+    ----------
+    timestamp: dt.datetime
+        Target time for satellite image
+    bands: list[int]
+        Band numbers to fetch (e.g., [8, 9, 10, 13, 14, 15])
+
+    Returns
+    -------
+    tuple of (band_data, first_dataset)
+        band_data: numpy array of shape (1, y, x, num_bands) with brightness temps
+        first_dataset: xarray Dataset from the first band (for coordinate extraction)
+    """
+    import xarray as xr
+
+    fs = s3fs.S3FileSystem(anon=True)
+    ts = timestamp.replace(tzinfo=None)
+
+    # Build S3 prefix for the target hour
+    prefix = f"noaa-goes16/ABI-L1b-RadC/{ts.year}/{ts.timetuple().tm_yday:03d}/{ts.hour:02d}"
+
+    all_band_data = []
+    first_ds = None
+
+    for band in bands:
+        band_str = f"C{band:02d}"
+        # List files matching this band in this hour
+        try:
+            files = fs.ls(prefix)
+        except Exception:
+            files = []
+
+        # Find the file closest to our timestamp for this band
+        band_files = [f for f in files if band_str in f]
+        if not band_files:
+            # Try the previous hour
+            prev_ts = ts - dt.timedelta(hours=1)
+            prev_prefix = f"noaa-goes16/ABI-L1b-RadC/{prev_ts.year}/{prev_ts.timetuple().tm_yday:03d}/{prev_ts.hour:02d}"
+            try:
+                files = fs.ls(prev_prefix)
+            except Exception:
+                files = []
+            band_files = [f for f in files if band_str in f]
+
+        if not band_files:
+            raise FileNotFoundError(f"No L1b-RadC file found for band {band} near {timestamp}")
+
+        # Pick the file closest to our target time
+        # Filenames contain timestamps like: ..._sYYYYDDDHHMMSSS_...
+        best_file = None
+        best_diff = float('inf')
+        for f in band_files:
+            try:
+                # Extract start time from filename: _sYYYYDDDHHMMSSS_
+                parts = f.split('_s')
+                if len(parts) < 2:
+                    continue
+                time_str = parts[1][:14]  # YYYYDDDHHMMSS
+                file_year = int(time_str[0:4])
+                file_doy = int(time_str[4:7])
+                file_hour = int(time_str[7:9])
+                file_min = int(time_str[9:11])
+                file_sec = int(time_str[11:13])
+                file_dt = dt.datetime(file_year, 1, 1) + dt.timedelta(
+                    days=file_doy - 1, hours=file_hour, minutes=file_min, seconds=file_sec
+                )
+                diff = abs((file_dt - ts).total_seconds())
+                if diff < best_diff:
+                    best_diff = diff
+                    best_file = f
+            except (ValueError, IndexError):
+                continue
+
+        if best_file is None:
+            raise FileNotFoundError(f"Could not parse L1b files for band {band} near {timestamp}")
+
+        # Open the file directly from S3, load into memory before closing
+        with fs.open(best_file) as fobj:
+            ds = xr.open_dataset(fobj, engine='h5netcdf')
+            ds.load()  # Force all data into memory before file handle closes
+
+        if first_ds is None:
+            first_ds = ds
+
+        # Extract radiance and convert to brightness temperature
+        rad = ds['Rad'].values
+        fk1 = float(ds['planck_fk1'].values)
+        fk2 = float(ds['planck_fk2'].values)
+        bc1 = float(ds['planck_bc1'].values)
+        bc2 = float(ds['planck_bc2'].values)
+
+        bt = radiance_to_brightness_temp(rad, fk1, fk2, bc1, bc2)
+        all_band_data.append(bt)
+
+    # Stack bands: each is (y, x) -> result is (1, y, x, num_bands)
+    stacked = np.stack(all_band_data, axis=-1)[np.newaxis, ...]
+    return stacked.astype(np.float32), first_ds
 
 
 def calculate_coordinates(data: Dataset) -> tuple[npt.ArrayLike, npt.ArrayLike]:

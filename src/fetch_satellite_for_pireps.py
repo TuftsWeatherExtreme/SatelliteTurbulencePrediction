@@ -16,7 +16,6 @@ import os
 import numpy as np
 import pandas as pd
 from datetime import datetime, timedelta
-from goes2go import GOES
 import time as time_module
 
 # Add src/ to path for local imports
@@ -69,7 +68,8 @@ def round_to_interval(dt, interval_min=FRAME_INTERVAL_MIN):
 
 def fetch_and_process_image(timestamp, goes_sat, cache, diagnostics):
     """
-    Fetch a single satellite image, project, and smooth it.
+    Fetch individual L1b-RadC band files, convert radiance to brightness temp,
+    project onto CONUS grid, and smooth.
     Uses an in-memory cache to avoid re-fetching the same timestamp.
     Returns the smoothed full CONUS array (1, 1500, 2500, 6) or None.
 
@@ -83,14 +83,13 @@ def fetch_and_process_image(timestamp, goes_sat, cache, diagnostics):
 
     try:
         t0 = time_module.time()
-        data = sat.fetch(timestamp, goes_sat)
+        band_data, first_ds = sat.fetch_l1b_bands(timestamp, BANDS)
         diagnostics["fetch_s"] = diagnostics.get("fetch_s", 0) + (time_module.time() - t0)
 
-        lat, lon = sat.calculate_coordinates(data)
-        band_data = sat.fetch_bands(data, BANDS)
+        lat, lon = sat.calculate_coordinates(first_ds)
 
         t0 = time_module.time()
-        projected = sat.project(lat, lon, band_data.values)
+        projected = sat.project(lat, lon, band_data)
         diagnostics["project_s"] = diagnostics.get("project_s", 0) + (time_module.time() - t0)
 
         t0 = time_module.time()
@@ -161,7 +160,7 @@ def main():
     else:
         print(f"Processing all {len(pireps_df)} PIREPs from {input_csv}", flush=True)
 
-    goes_sat = GOES(satellite=16, product="ABI", domain="C")
+    goes_sat = None  # No longer needed — using direct L1b-RadC S3 access per band
     num_saved = 0
     num_skipped = 0
     num_failed = 0
