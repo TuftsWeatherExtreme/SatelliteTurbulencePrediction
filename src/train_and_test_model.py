@@ -20,6 +20,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torch.utils.data import DataLoader, Subset
 from sklearn.model_selection import KFold
+from model_architecture import SatelliteTurbulenceModel
 
 NUM_EPOCHS = 20
 BATCH_SIZE = 16
@@ -191,10 +192,10 @@ def load_checkpoint(path, model, optimizer):
 def train_epoch(model, loader, optimizer, device):
     model.train()
     total_loss = 0
-    for x, y, w in loader:
-        x, y, w = x.to(device), y.long().to(device), w.to(device)
+    for x, meta, y, w in loader:  # unpack metadata
+        x, meta, y, w = x.to(device), meta.to(device), y.long().to(device), w.to(device)
         optimizer.zero_grad()
-        y_hat = model(x)
+        y_hat = model(x, meta)  # pass metadata to model
         loss = F.cross_entropy(y_hat, y, reduction='none')
         loss = (loss * w).mean()
         loss.backward()
@@ -207,9 +208,9 @@ def evaluate(model, loader, device):
     model.eval()
     total_loss = 0
     with torch.no_grad():
-        for x, y, w in loader:
-            x, y, w = x.to(device), y.long().to(device), w.to(device)
-            y_hat = model(x)
+        for x, meta, y, w in loader:  # unpack metadata
+            x, meta, y, w = x.to(device), meta.to(device), y.long().to(device), w.to(device)
+            y_hat = model(x, meta)  # pass metadata to model
             loss = F.cross_entropy(y_hat, y, reduction='none')
             loss = (loss * w).mean()
             total_loss += loss.item()
@@ -298,7 +299,7 @@ def main():
     resuming = False
 
     # Create a dummy model/optimizer to attempt checkpoint load
-    dummy_model = ModelClass().to(device)
+    dummy_model = SatelliteTurbulenceModel(num_metadata_features=4).to(device) # UPDATE
     dummy_optimizer = optim.Adam(dummy_model.parameters())
     checkpoint = load_checkpoint(checkpoint_path, dummy_model, dummy_optimizer)
 
@@ -333,7 +334,7 @@ def main():
                 optimizer.param_groups[0]['weight_decay'] = l2_alpha
                 resuming = False
             else:
-                model = ModelClass().to(device)
+                model = SatelliteTurbulenceModel(num_metadata_features=4).to(device) # UPDATE
                 if num_gpus > 1:
                     model = nn.DataParallel(model)
                 optimizer = optim.Adam(model.parameters(), lr=1e-3, weight_decay=l2_alpha)
@@ -365,7 +366,7 @@ def main():
     # Retrain on full training set with best L2
     print("Retraining on full training set...")
     train_loader = DataLoader(train_dataset, batch_size=BATCH_SIZE, shuffle=True, num_workers=4, pin_memory=True)
-    best_model = ModelClass().to(device)
+    best_model = SatelliteTurbulenceModel(num_metadata_features=4).to(device) # UPDATE
     if num_gpus > 1:
         best_model = nn.DataParallel(best_model)
     optimizer = optim.Adam(best_model.parameters(), lr=1e-3, weight_decay=best_l2)

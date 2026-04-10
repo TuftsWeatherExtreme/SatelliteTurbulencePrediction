@@ -22,6 +22,10 @@ from io import StringIO
 import numpy as np
 import os
 from signal import signal, SIGPIPE, SIG_DFL
+from get_sigmets import is_in_sigmet, process_sigmets, fetch_sigmets
+from datetime import date
+import calendar
+
 signal(SIGPIPE,SIG_DFL) 
 
 
@@ -249,6 +253,7 @@ len_before_drop_na_fl = len(only_turb_pireps)
 only_turb_pireps_w_altitude = only_turb_pireps.dropna(subset=['FL', 'LAT', 'LON'])
 eprint(f"We dropped {len_before_drop_na_fl - len(only_turb_pireps_w_altitude)}/{len_before_drop_na_fl} pireps with unknown flight level, latitude, or longitude")
 
+
 # Filter to SEV+ (intensity >= 5) and NONE/SMOOTH (intensity <= 1) for binary classification
 len_before_filter = len(only_turb_pireps_w_altitude)
 sev_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] >= 5].copy()
@@ -264,6 +269,47 @@ none_pireps['turb_label'] = 0
 
 only_turb_pireps_w_altitude = pd.concat([sev_pireps, none_pireps], ignore_index=True)
 eprint(f"Binary filter: {len(sev_pireps)} SEV+ and {len(none_pireps)} NONE/SMOOTH from {len_before_filter} total")
+
+
+# NOTE FOR SOPHIE: THIS CODE BELOW WAS UPDATED FOR NEXRAD MODEL TO HAVE = NUMBER SEV AND NON-SEV PIREPS, DON'T KNOW IF YOU WANT INCLUDED
+# Filter to SEV and above (turbulence_intensity >= 5)
+#MIN_TURBULENCE_INTENSITY = 5
+#NONSEVERE_TO_SEVERE_RATIO = 1  # For every 1 severe PIREP, include 1 non-severe
+
+#len_before_sev_filter = len(only_turb_pireps_w_altitude)
+
+#severe_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] >= MIN_TURBULENCE_INTENSITY]
+#nonsevere_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] < MIN_TURBULENCE_INTENSITY]
+
+# Sample non-severe PIREPs to match ratio
+#num_nonsevere_to_keep = min(len(severe_pireps) * NONSEVERE_TO_SEVERE_RATIO, len(nonsevere_pireps))
+#nonsevere_sampled = nonsevere_pireps.sample(n=num_nonsevere_to_keep, random_state=42)
+
+#only_turb_pireps_w_altitude = pd.concat([severe_pireps, nonsevere_sampled]).sample(frac=1, random_state=42).reset_index(drop=True)
+
+#eprint(f"Severe PIREPs: {len(severe_pireps)}, Non-severe PIREPs sampled: {num_nonsevere_to_keep}/{len(nonsevere_pireps)}")
+#eprint(f"Final dataset size: {len(only_turb_pireps_w_altitude)}/{len_before_sev_filter} pireps")
+
+
+
+# ── SIGMET annotation ─────────────────────────────────────────────────────
+eprint("Fetching SIGMETs to annotate PIREPs...")
+try:
+    sigmets_gdf = fetch_sigmets(YEAR, START_MONTH_IDX)
+    sigmets_df = process_sigmets(sigmets_gdf)
+    only_turb_pireps_w_altitude['datetime'] = pd.to_datetime(
+        only_turb_pireps_w_altitude['datetime'], utc=True, errors='coerce'
+    )
+    only_turb_pireps_w_altitude['in_sigmet'] = only_turb_pireps_w_altitude.apply(
+        lambda row: is_in_sigmet(
+            row['LAT'], row['LON'], row['FL'], row['datetime'], sigmets_df
+        ), axis=1
+    )
+    eprint(f"SIGMETs found for {only_turb_pireps_w_altitude['in_sigmet'].sum()} PIREPs")
+except Exception as e:
+    eprint(f"WARNING: SIGMET annotation failed: {e}. Setting in_sigmet=0.")
+    only_turb_pireps_w_altitude['in_sigmet'] = 0
+
 
 #add plane weight classification into the dataframe
 plane_weight_dict = pd.read_csv(os.path.join(DIRNAME, "../plane_weights/plane_weight_dictionary.csv"))

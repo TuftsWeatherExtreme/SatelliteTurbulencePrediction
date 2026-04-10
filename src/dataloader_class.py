@@ -27,6 +27,7 @@ class SatelliteDataLoader(Dataset):
     def __len__(self):
         return len(self.file_paths)
 
+    # Updated for sigmet integration
     def __getitem__(self, idx):
         npz = np.load(self.file_paths[idx])
         # images shape: (15, 128, 128, 6) -> reorder to (15, 6, 128, 128) for PyTorch
@@ -35,4 +36,13 @@ class SatelliteDataLoader(Dataset):
         features = torch.nan_to_num(features, nan=0.0)
         label = int(npz['turb_label'])
         weight = float(npz['sample_weight'])
-        return features, label, weight
+        
+        # Metadata scalar features passed alongside image tensor
+        metadata = torch.tensor([
+            float(npz['lat']),
+            float(npz['lon']),
+            float(npz['fl']),
+            float(npz.get('in_sigmet', 0)),  # new — defaults to 0 for old .npz files
+        ], dtype=torch.float32)
+        
+        return features, metadata, label, weight

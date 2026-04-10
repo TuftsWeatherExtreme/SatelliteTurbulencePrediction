@@ -209,6 +209,7 @@ def main():
             images=frames,
             turb_label=pirep['turb_label'],
             sample_weight=pirep['sample_weight'],
+            in_sigmet=int(pirep.get('in_sigmet', 0)),  # new
             lat=pirep_lat,
             lon=pirep_lon,
             fl=pirep['FL'],
