@@ -386,7 +386,7 @@ def smooth_single_band(
 
     ## runs after projection, gets points that are in between buckets from
     #  projection AND things that are not inside frame of GOES E
-    empty_mask = data <= 0  # If band data is lt 0 then it may not work
+    empty_mask = (data <= 0) | np.isnan(data)
     indices = distance_transform_edt(
         empty_mask, return_distances=False, return_indices=True
     )
