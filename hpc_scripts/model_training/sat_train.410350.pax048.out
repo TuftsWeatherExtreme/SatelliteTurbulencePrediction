@@ -1,0 +1,490 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Allocating resources with slurm...
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Tue Apr  7 14:06:30 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 575.57.08              Driver Version: 575.57.08      CUDA Version: 12.9     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40                     On  |   00000000:4A:00.0 Off |                    0 |
+| N/A   31C    P8             35W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+About to train the conv3d model with seed 43
+Using device: cuda (1 GPU(s))
+Model type: conv3d
+Thresholds for test eval: [0.3, 0.4, 0.5]
+Number of EPOCHS: 20
+Data directory: /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs
+SatelliteDataLoader: found 10120 samples
+Dataset size: 10120
+
+L2 alpha = 0.003
+  Fold 0
+    Epoch 0: train_loss=0.4605, val_loss=0.9104
+Checkpoint saved: l2_idx=0, fold=0, epoch=0
+    Epoch 1: train_loss=0.4552, val_loss=0.4850
+Checkpoint saved: l2_idx=0, fold=0, epoch=1
+    Epoch 2: train_loss=0.4536, val_loss=0.5326
+Checkpoint saved: l2_idx=0, fold=0, epoch=2
+    Epoch 3: train_loss=0.4528, val_loss=0.4625
+Checkpoint saved: l2_idx=0, fold=0, epoch=3
+    Epoch 4: train_loss=0.4517, val_loss=0.4681
+Checkpoint saved: l2_idx=0, fold=0, epoch=4
+    Epoch 5: train_loss=0.4505, val_loss=0.5012
+Checkpoint saved: l2_idx=0, fold=0, epoch=5
+    Epoch 6: train_loss=0.4520, val_loss=0.7397
+Checkpoint saved: l2_idx=0, fold=0, epoch=6
+    Epoch 7: train_loss=0.4525, val_loss=1.5034
+Checkpoint saved: l2_idx=0, fold=0, epoch=7
+    Epoch 8: train_loss=0.4488, val_loss=0.4684
+Checkpoint saved: l2_idx=0, fold=0, epoch=8
+    Epoch 9: train_loss=0.4513, val_loss=0.5092
+Checkpoint saved: l2_idx=0, fold=0, epoch=9
+    Epoch 10: train_loss=0.4528, val_loss=0.4554
+Checkpoint saved: l2_idx=0, fold=0, epoch=10
+    Epoch 11: train_loss=0.4518, val_loss=0.7806
+Checkpoint saved: l2_idx=0, fold=0, epoch=11
+    Epoch 12: train_loss=0.4507, val_loss=0.4783
+Checkpoint saved: l2_idx=0, fold=0, epoch=12
+    Epoch 13: train_loss=0.4488, val_loss=0.4565
+Checkpoint saved: l2_idx=0, fold=0, epoch=13
+    Epoch 14: train_loss=0.4506, val_loss=0.5782
+Checkpoint saved: l2_idx=0, fold=0, epoch=14
+    Epoch 15: train_loss=0.4431, val_loss=0.5657
+Checkpoint saved: l2_idx=0, fold=0, epoch=15
+    Epoch 16: train_loss=0.4453, val_loss=0.4331
+Checkpoint saved: l2_idx=0, fold=0, epoch=16
+    Epoch 17: train_loss=0.4399, val_loss=0.4529
+Checkpoint saved: l2_idx=0, fold=0, epoch=17
+    Epoch 18: train_loss=0.4417, val_loss=0.5090
+Checkpoint saved: l2_idx=0, fold=0, epoch=18
+    Epoch 19: train_loss=0.4415, val_loss=0.4383
+Checkpoint saved: l2_idx=0, fold=0, epoch=19
+  Fold 0 final val_loss: 0.4383
+  Fold 1
+    Epoch 0: train_loss=0.4596, val_loss=0.4654
+Checkpoint saved: l2_idx=0, fold=1, epoch=0
+    Epoch 1: train_loss=0.4561, val_loss=0.4733
+Checkpoint saved: l2_idx=0, fold=1, epoch=1
+    Epoch 2: train_loss=0.4584, val_loss=0.4686
+Checkpoint saved: l2_idx=0, fold=1, epoch=2
+    Epoch 3: train_loss=0.4599, val_loss=0.4757
+Checkpoint saved: l2_idx=0, fold=1, epoch=3
+    Epoch 4: train_loss=0.4599, val_loss=0.4654
+Checkpoint saved: l2_idx=0, fold=1, epoch=4
+    Epoch 5: train_loss=0.4580, val_loss=0.4645
+Checkpoint saved: l2_idx=0, fold=1, epoch=5
+    Epoch 6: train_loss=0.4578, val_loss=0.5074
+Checkpoint saved: l2_idx=0, fold=1, epoch=6
+    Epoch 7: train_loss=0.4546, val_loss=0.4628
+Checkpoint saved: l2_idx=0, fold=1, epoch=7
+    Epoch 8: train_loss=0.4543, val_loss=0.4802
+Checkpoint saved: l2_idx=0, fold=1, epoch=8
+    Epoch 9: train_loss=0.4468, val_loss=0.4910
+Checkpoint saved: l2_idx=0, fold=1, epoch=9
+    Epoch 10: train_loss=0.4461, val_loss=0.4787
+Checkpoint saved: l2_idx=0, fold=1, epoch=10
+    Epoch 11: train_loss=0.4468, val_loss=1.4024
+Checkpoint saved: l2_idx=0, fold=1, epoch=11
+    Epoch 12: train_loss=0.4421, val_loss=0.8613
+Checkpoint saved: l2_idx=0, fold=1, epoch=12
+    Epoch 13: train_loss=0.4417, val_loss=1.0499
+Checkpoint saved: l2_idx=0, fold=1, epoch=13
+    Epoch 14: train_loss=0.4387, val_loss=0.4766
+Checkpoint saved: l2_idx=0, fold=1, epoch=14
+    Epoch 15: train_loss=0.4416, val_loss=0.5759
+Checkpoint saved: l2_idx=0, fold=1, epoch=15
+    Epoch 16: train_loss=0.4413, val_loss=0.4945
+Checkpoint saved: l2_idx=0, fold=1, epoch=16
+    Epoch 17: train_loss=0.4384, val_loss=0.5590
+Checkpoint saved: l2_idx=0, fold=1, epoch=17
+    Epoch 18: train_loss=0.4372, val_loss=1.1152
+Checkpoint saved: l2_idx=0, fold=1, epoch=18
+    Epoch 19: train_loss=0.4394, val_loss=0.4539
+Checkpoint saved: l2_idx=0, fold=1, epoch=19
+  Fold 1 final val_loss: 0.4539
+  Fold 2
+    Epoch 0: train_loss=0.4632, val_loss=0.4710
+Checkpoint saved: l2_idx=0, fold=2, epoch=0
+    Epoch 1: train_loss=0.4531, val_loss=0.7601
+Checkpoint saved: l2_idx=0, fold=2, epoch=1
+    Epoch 2: train_loss=0.4543, val_loss=0.4597
+Checkpoint saved: l2_idx=0, fold=2, epoch=2
+    Epoch 3: train_loss=0.4504, val_loss=0.4817
+Checkpoint saved: l2_idx=0, fold=2, epoch=3
+    Epoch 4: train_loss=0.4568, val_loss=0.4743
+Checkpoint saved: l2_idx=0, fold=2, epoch=4
+    Epoch 5: train_loss=0.4528, val_loss=0.4703
+Checkpoint saved: l2_idx=0, fold=2, epoch=5
+    Epoch 6: train_loss=0.4509, val_loss=0.4913
+Checkpoint saved: l2_idx=0, fold=2, epoch=6
+    Epoch 7: train_loss=0.4481, val_loss=1.0262
+Checkpoint saved: l2_idx=0, fold=2, epoch=7
+    Epoch 8: train_loss=0.4523, val_loss=0.4849
+Checkpoint saved: l2_idx=0, fold=2, epoch=8
+    Epoch 9: train_loss=0.4427, val_loss=0.5707
+Checkpoint saved: l2_idx=0, fold=2, epoch=9
+    Epoch 10: train_loss=0.4470, val_loss=0.4760
+Checkpoint saved: l2_idx=0, fold=2, epoch=10
+    Epoch 11: train_loss=0.4463, val_loss=0.4896
+Checkpoint saved: l2_idx=0, fold=2, epoch=11
+    Epoch 12: train_loss=0.4397, val_loss=0.5001
+Checkpoint saved: l2_idx=0, fold=2, epoch=12
+    Epoch 13: train_loss=0.4390, val_loss=0.5139
+Checkpoint saved: l2_idx=0, fold=2, epoch=13
+    Epoch 14: train_loss=0.4382, val_loss=0.4792
+Checkpoint saved: l2_idx=0, fold=2, epoch=14
+    Epoch 15: train_loss=0.4390, val_loss=0.5659
+Checkpoint saved: l2_idx=0, fold=2, epoch=15
+    Epoch 16: train_loss=0.4387, val_loss=0.8828
+Checkpoint saved: l2_idx=0, fold=2, epoch=16
+    Epoch 17: train_loss=0.4342, val_loss=0.4749
+Checkpoint saved: l2_idx=0, fold=2, epoch=17
+    Epoch 18: train_loss=0.4364, val_loss=0.8765
+Checkpoint saved: l2_idx=0, fold=2, epoch=18
+    Epoch 19: train_loss=0.4328, val_loss=0.5897
+Checkpoint saved: l2_idx=0, fold=2, epoch=19
+  Fold 2 final val_loss: 0.5897
+  Average CV loss for l2=0.003: 0.4940
+
+L2 alpha = 0.001
+  Fold 0
+    Epoch 0: train_loss=0.4584, val_loss=0.4977
+Checkpoint saved: l2_idx=1, fold=0, epoch=0
+    Epoch 1: train_loss=0.4516, val_loss=0.4834
+Checkpoint saved: l2_idx=1, fold=0, epoch=1
+    Epoch 2: train_loss=0.4478, val_loss=0.4849
+Checkpoint saved: l2_idx=1, fold=0, epoch=2
+    Epoch 3: train_loss=0.4487, val_loss=0.4562
+Checkpoint saved: l2_idx=1, fold=0, epoch=3
+    Epoch 4: train_loss=0.4501, val_loss=0.4553
+Checkpoint saved: l2_idx=1, fold=0, epoch=4
+    Epoch 5: train_loss=0.4469, val_loss=0.4760
+Checkpoint saved: l2_idx=1, fold=0, epoch=5
+    Epoch 6: train_loss=0.4459, val_loss=0.4826
+Checkpoint saved: l2_idx=1, fold=0, epoch=6
+    Epoch 7: train_loss=0.4461, val_loss=0.4401
+Checkpoint saved: l2_idx=1, fold=0, epoch=7
+    Epoch 8: train_loss=0.4438, val_loss=0.4535
+Checkpoint saved: l2_idx=1, fold=0, epoch=8
+    Epoch 9: train_loss=0.4426, val_loss=0.4844
+Checkpoint saved: l2_idx=1, fold=0, epoch=9
+    Epoch 10: train_loss=0.4461, val_loss=0.4415
+Checkpoint saved: l2_idx=1, fold=0, epoch=10
+    Epoch 11: train_loss=0.4427, val_loss=0.4448
+Checkpoint saved: l2_idx=1, fold=0, epoch=11
+    Epoch 12: train_loss=0.4417, val_loss=0.4743
+Checkpoint saved: l2_idx=1, fold=0, epoch=12
+    Epoch 13: train_loss=0.4399, val_loss=0.5328
+Checkpoint saved: l2_idx=1, fold=0, epoch=13
+    Epoch 14: train_loss=0.4419, val_loss=0.4770
+Checkpoint saved: l2_idx=1, fold=0, epoch=14
+    Epoch 15: train_loss=0.4435, val_loss=0.4580
+Checkpoint saved: l2_idx=1, fold=0, epoch=15
+    Epoch 16: train_loss=0.4392, val_loss=0.4621
+Checkpoint saved: l2_idx=1, fold=0, epoch=16
+    Epoch 17: train_loss=0.4389, val_loss=0.4936
+Checkpoint saved: l2_idx=1, fold=0, epoch=17
+    Epoch 18: train_loss=0.4384, val_loss=0.5359
+Checkpoint saved: l2_idx=1, fold=0, epoch=18
+    Epoch 19: train_loss=0.4359, val_loss=1.0361
+Checkpoint saved: l2_idx=1, fold=0, epoch=19
+  Fold 0 final val_loss: 1.0361
+  Fold 1
+    Epoch 0: train_loss=0.4579, val_loss=0.5016
+Checkpoint saved: l2_idx=1, fold=1, epoch=0
+    Epoch 1: train_loss=0.4519, val_loss=0.4782
+Checkpoint saved: l2_idx=1, fold=1, epoch=1
+    Epoch 2: train_loss=0.4506, val_loss=0.4798
+Checkpoint saved: l2_idx=1, fold=1, epoch=2
+    Epoch 3: train_loss=0.4515, val_loss=0.4745
+Checkpoint saved: l2_idx=1, fold=1, epoch=3
+    Epoch 4: train_loss=0.4469, val_loss=0.4650
+Checkpoint saved: l2_idx=1, fold=1, epoch=4
+    Epoch 5: train_loss=0.4451, val_loss=0.6016
+Checkpoint saved: l2_idx=1, fold=1, epoch=5
+    Epoch 6: train_loss=0.4417, val_loss=0.4626
+Checkpoint saved: l2_idx=1, fold=1, epoch=6
+    Epoch 7: train_loss=0.4417, val_loss=0.4970
+Checkpoint saved: l2_idx=1, fold=1, epoch=7
+    Epoch 8: train_loss=0.4446, val_loss=0.4594
+Checkpoint saved: l2_idx=1, fold=1, epoch=8
+    Epoch 9: train_loss=0.4399, val_loss=0.4697
+Checkpoint saved: l2_idx=1, fold=1, epoch=9
+    Epoch 10: train_loss=0.4394, val_loss=0.4829
+Checkpoint saved: l2_idx=1, fold=1, epoch=10
+    Epoch 11: train_loss=0.4388, val_loss=0.4922
+Checkpoint saved: l2_idx=1, fold=1, epoch=11
+    Epoch 12: train_loss=0.4366, val_loss=0.4786
+Checkpoint saved: l2_idx=1, fold=1, epoch=12
+    Epoch 13: train_loss=0.4371, val_loss=0.5500
+Checkpoint saved: l2_idx=1, fold=1, epoch=13
+    Epoch 14: train_loss=0.4348, val_loss=0.4844
+Checkpoint saved: l2_idx=1, fold=1, epoch=14
+    Epoch 15: train_loss=0.4318, val_loss=0.4515
+Checkpoint saved: l2_idx=1, fold=1, epoch=15
+    Epoch 16: train_loss=0.4322, val_loss=0.4722
+Checkpoint saved: l2_idx=1, fold=1, epoch=16
+    Epoch 17: train_loss=0.4318, val_loss=0.4877
+Checkpoint saved: l2_idx=1, fold=1, epoch=17
+    Epoch 18: train_loss=0.4318, val_loss=0.5622
+Checkpoint saved: l2_idx=1, fold=1, epoch=18
+    Epoch 19: train_loss=0.4305, val_loss=0.4735
+Checkpoint saved: l2_idx=1, fold=1, epoch=19
+  Fold 1 final val_loss: 0.4735
+  Fold 2
+    Epoch 0: train_loss=0.4580, val_loss=0.4729
+Checkpoint saved: l2_idx=1, fold=2, epoch=0
+    Epoch 1: train_loss=0.4483, val_loss=0.4997
+Checkpoint saved: l2_idx=1, fold=2, epoch=1
+    Epoch 2: train_loss=0.4454, val_loss=0.4729
+Checkpoint saved: l2_idx=1, fold=2, epoch=2
+    Epoch 3: train_loss=0.4415, val_loss=0.5062
+Checkpoint saved: l2_idx=1, fold=2, epoch=3
+    Epoch 4: train_loss=0.4436, val_loss=0.4765
+Checkpoint saved: l2_idx=1, fold=2, epoch=4
+    Epoch 5: train_loss=0.4390, val_loss=0.5018
+Checkpoint saved: l2_idx=1, fold=2, epoch=5
+    Epoch 6: train_loss=0.4389, val_loss=0.6434
+Checkpoint saved: l2_idx=1, fold=2, epoch=6
+    Epoch 7: train_loss=0.4384, val_loss=0.4998
+Checkpoint saved: l2_idx=1, fold=2, epoch=7
+    Epoch 8: train_loss=0.4375, val_loss=0.6292
+Checkpoint saved: l2_idx=1, fold=2, epoch=8
+    Epoch 9: train_loss=0.4363, val_loss=0.6442
+Checkpoint saved: l2_idx=1, fold=2, epoch=9
+    Epoch 10: train_loss=0.4341, val_loss=0.4883
+Checkpoint saved: l2_idx=1, fold=2, epoch=10
+    Epoch 11: train_loss=0.4397, val_loss=0.4368
+Checkpoint saved: l2_idx=1, fold=2, epoch=11
+    Epoch 12: train_loss=0.4342, val_loss=0.4791
+Checkpoint saved: l2_idx=1, fold=2, epoch=12
+    Epoch 13: train_loss=0.4344, val_loss=0.4422
+Checkpoint saved: l2_idx=1, fold=2, epoch=13
+    Epoch 14: train_loss=0.4304, val_loss=0.5167
+Checkpoint saved: l2_idx=1, fold=2, epoch=14
+    Epoch 15: train_loss=0.4308, val_loss=0.4969
+Checkpoint saved: l2_idx=1, fold=2, epoch=15
+    Epoch 16: train_loss=0.4289, val_loss=0.5184
+Checkpoint saved: l2_idx=1, fold=2, epoch=16
+    Epoch 17: train_loss=0.4289, val_loss=0.4418
+Checkpoint saved: l2_idx=1, fold=2, epoch=17
+    Epoch 18: train_loss=0.4275, val_loss=0.4462
+Checkpoint saved: l2_idx=1, fold=2, epoch=18
+    Epoch 19: train_loss=0.4303, val_loss=0.4490
+Checkpoint saved: l2_idx=1, fold=2, epoch=19
+  Fold 2 final val_loss: 0.4490
+  Average CV loss for l2=0.001: 0.6528
+
+L2 alpha = 0.0003
+  Fold 0
+    Epoch 0: train_loss=0.4572, val_loss=0.4586
+Checkpoint saved: l2_idx=2, fold=0, epoch=0
+    Epoch 1: train_loss=0.4461, val_loss=0.4729
+Checkpoint saved: l2_idx=2, fold=0, epoch=1
+    Epoch 2: train_loss=0.4471, val_loss=0.4444
+Checkpoint saved: l2_idx=2, fold=0, epoch=2
+    Epoch 3: train_loss=0.4434, val_loss=0.4429
+Checkpoint saved: l2_idx=2, fold=0, epoch=3
+    Epoch 4: train_loss=0.4411, val_loss=0.6237
+Checkpoint saved: l2_idx=2, fold=0, epoch=4
+    Epoch 5: train_loss=0.4447, val_loss=0.4489
+Checkpoint saved: l2_idx=2, fold=0, epoch=5
+    Epoch 6: train_loss=0.4411, val_loss=0.5080
+Checkpoint saved: l2_idx=2, fold=0, epoch=6
+    Epoch 7: train_loss=0.4418, val_loss=0.5676
+Checkpoint saved: l2_idx=2, fold=0, epoch=7
+    Epoch 8: train_loss=0.4406, val_loss=0.4615
+Checkpoint saved: l2_idx=2, fold=0, epoch=8
+    Epoch 9: train_loss=0.4403, val_loss=0.4637
+Checkpoint saved: l2_idx=2, fold=0, epoch=9
+    Epoch 10: train_loss=0.4376, val_loss=0.4796
+Checkpoint saved: l2_idx=2, fold=0, epoch=10
+    Epoch 11: train_loss=0.4366, val_loss=0.4380
+Checkpoint saved: l2_idx=2, fold=0, epoch=11
+    Epoch 12: train_loss=0.4389, val_loss=0.5463
+Checkpoint saved: l2_idx=2, fold=0, epoch=12
+    Epoch 13: train_loss=0.4362, val_loss=0.4316
+Checkpoint saved: l2_idx=2, fold=0, epoch=13
+    Epoch 14: train_loss=0.4359, val_loss=0.4331
+Checkpoint saved: l2_idx=2, fold=0, epoch=14
+    Epoch 15: train_loss=0.4349, val_loss=0.4645
+Checkpoint saved: l2_idx=2, fold=0, epoch=15
+    Epoch 16: train_loss=0.4365, val_loss=0.4427
+Checkpoint saved: l2_idx=2, fold=0, epoch=16
+    Epoch 17: train_loss=0.4357, val_loss=0.4323
+Checkpoint saved: l2_idx=2, fold=0, epoch=17
+    Epoch 18: train_loss=0.4342, val_loss=0.4479
+Checkpoint saved: l2_idx=2, fold=0, epoch=18
+    Epoch 19: train_loss=0.4323, val_loss=0.4306
+Checkpoint saved: l2_idx=2, fold=0, epoch=19
+  Fold 0 final val_loss: 0.4306
+  Fold 1
+    Epoch 0: train_loss=0.4590, val_loss=0.4523
+Checkpoint saved: l2_idx=2, fold=1, epoch=0
+    Epoch 1: train_loss=0.4494, val_loss=0.5226
+Checkpoint saved: l2_idx=2, fold=1, epoch=1
+    Epoch 2: train_loss=0.4466, val_loss=0.4604
+Checkpoint saved: l2_idx=2, fold=1, epoch=2
+    Epoch 3: train_loss=0.4448, val_loss=0.4406
+Checkpoint saved: l2_idx=2, fold=1, epoch=3
+    Epoch 4: train_loss=0.4384, val_loss=0.5544
+Checkpoint saved: l2_idx=2, fold=1, epoch=4
+    Epoch 5: train_loss=0.4426, val_loss=0.4637
+Checkpoint saved: l2_idx=2, fold=1, epoch=5
+    Epoch 6: train_loss=0.4420, val_loss=0.4860
+Checkpoint saved: l2_idx=2, fold=1, epoch=6
+    Epoch 7: train_loss=0.4405, val_loss=0.4750
+Checkpoint saved: l2_idx=2, fold=1, epoch=7
+    Epoch 8: train_loss=0.4371, val_loss=0.6729
+Checkpoint saved: l2_idx=2, fold=1, epoch=8
+    Epoch 9: train_loss=0.4370, val_loss=0.7015
+Checkpoint saved: l2_idx=2, fold=1, epoch=9
+    Epoch 10: train_loss=0.4376, val_loss=0.4657
+Checkpoint saved: l2_idx=2, fold=1, epoch=10
+    Epoch 11: train_loss=0.4361, val_loss=0.5518
+Checkpoint saved: l2_idx=2, fold=1, epoch=11
+    Epoch 12: train_loss=0.4360, val_loss=0.5601
+Checkpoint saved: l2_idx=2, fold=1, epoch=12
+    Epoch 13: train_loss=0.4371, val_loss=0.4395
+Checkpoint saved: l2_idx=2, fold=1, epoch=13
+    Epoch 14: train_loss=0.4348, val_loss=0.4314
+Checkpoint saved: l2_idx=2, fold=1, epoch=14
+    Epoch 15: train_loss=0.4325, val_loss=0.4709
+Checkpoint saved: l2_idx=2, fold=1, epoch=15
+    Epoch 16: train_loss=0.4319, val_loss=0.5581
+Checkpoint saved: l2_idx=2, fold=1, epoch=16
+    Epoch 17: train_loss=0.4312, val_loss=0.5582
+Checkpoint saved: l2_idx=2, fold=1, epoch=17
+    Epoch 18: train_loss=0.4287, val_loss=0.5395
+Checkpoint saved: l2_idx=2, fold=1, epoch=18
+    Epoch 19: train_loss=0.4289, val_loss=0.5398
+Checkpoint saved: l2_idx=2, fold=1, epoch=19
+  Fold 1 final val_loss: 0.5398
+  Fold 2
+    Epoch 0: train_loss=0.4588, val_loss=1.2249
+Checkpoint saved: l2_idx=2, fold=2, epoch=0
+    Epoch 1: train_loss=0.4505, val_loss=0.4611
+Checkpoint saved: l2_idx=2, fold=2, epoch=1
+    Epoch 2: train_loss=0.4436, val_loss=0.4795
+Checkpoint saved: l2_idx=2, fold=2, epoch=2
+    Epoch 3: train_loss=0.4407, val_loss=0.4520
+Checkpoint saved: l2_idx=2, fold=2, epoch=3
+    Epoch 4: train_loss=0.4383, val_loss=1.3755
+Checkpoint saved: l2_idx=2, fold=2, epoch=4
+    Epoch 5: train_loss=0.4397, val_loss=0.5267
+Checkpoint saved: l2_idx=2, fold=2, epoch=5
+    Epoch 6: train_loss=0.4379, val_loss=0.4517
+Checkpoint saved: l2_idx=2, fold=2, epoch=6
+    Epoch 7: train_loss=0.4346, val_loss=0.4537
+Checkpoint saved: l2_idx=2, fold=2, epoch=7
+    Epoch 8: train_loss=0.4377, val_loss=0.4416
+Checkpoint saved: l2_idx=2, fold=2, epoch=8
+    Epoch 9: train_loss=0.4363, val_loss=1.5301
+Checkpoint saved: l2_idx=2, fold=2, epoch=9
+    Epoch 10: train_loss=0.4340, val_loss=0.4955
+Checkpoint saved: l2_idx=2, fold=2, epoch=10
+    Epoch 11: train_loss=0.4340, val_loss=0.6544
+Checkpoint saved: l2_idx=2, fold=2, epoch=11
+    Epoch 12: train_loss=0.4323, val_loss=0.4394
+Checkpoint saved: l2_idx=2, fold=2, epoch=12
+    Epoch 13: train_loss=0.4310, val_loss=0.4858
+Checkpoint saved: l2_idx=2, fold=2, epoch=13
+    Epoch 14: train_loss=0.4336, val_loss=0.5672
+Checkpoint saved: l2_idx=2, fold=2, epoch=14
+    Epoch 15: train_loss=0.4293, val_loss=0.4363
+Checkpoint saved: l2_idx=2, fold=2, epoch=15
+    Epoch 16: train_loss=0.4282, val_loss=0.4465
+Checkpoint saved: l2_idx=2, fold=2, epoch=16
+    Epoch 17: train_loss=0.4291, val_loss=1.0472
+Checkpoint saved: l2_idx=2, fold=2, epoch=17
+    Epoch 18: train_loss=0.4271, val_loss=0.4492
+Checkpoint saved: l2_idx=2, fold=2, epoch=18
+    Epoch 19: train_loss=0.4292, val_loss=0.9476
+Checkpoint saved: l2_idx=2, fold=2, epoch=19
+  Fold 2 final val_loss: 0.9476
+  Average CV loss for l2=0.0003: 0.6393
+
+Best L2 alpha: 0.003 (loss: 0.4940)
+Retraining on full training set...
+  Retrain epoch 0: loss=0.4601
+  Retrain epoch 1: loss=0.4567
+  Retrain epoch 2: loss=0.4535
+  Retrain epoch 3: loss=0.4550
+  Retrain epoch 4: loss=0.4504
+  Retrain epoch 5: loss=0.4479
+  Retrain epoch 6: loss=0.4470
+  Retrain epoch 7: loss=0.4445
+  Retrain epoch 8: loss=0.4406
+  Retrain epoch 9: loss=0.4387
+  Retrain epoch 10: loss=0.4404
+  Retrain epoch 11: loss=0.4378
+  Retrain epoch 12: loss=0.4381
+  Retrain epoch 13: loss=0.4339
+  Retrain epoch 14: loss=0.4355
+  Retrain epoch 15: loss=0.4332
+  Retrain epoch 16: loss=0.4348
+  Retrain epoch 17: loss=0.4343
+  Retrain epoch 18: loss=0.4337
+  Retrain epoch 19: loss=0.4316
+
+Evaluating on test set...
+
+=== DATA / MODEL DIAGNOSTICS ===
+True positive rate in dataset: 0.6561
+Average predicted probability: 0.5330
+
+Threshold = 0.3
+Accuracy: 996/1518 (65.61%)
+Precision: 0.6561
+Recall: 1.0000
+F1 Score: 0.7924
+Confusion matrix: TP=996, FP=522, TN=0, FN=0
+Predicted positive rate: 1.0000
+Avg prob (true positives): 0.5375
+Avg prob (true negatives): nan
+
+Threshold = 0.4
+Accuracy: 996/1518 (65.61%)
+Precision: 0.6561
+Recall: 1.0000
+F1 Score: 0.7924
+Confusion matrix: TP=996, FP=522, TN=0, FN=0
+Predicted positive rate: 1.0000
+Avg prob (true positives): 0.5375
+Avg prob (true negatives): nan
+
+Threshold = 0.5
+Accuracy: 996/1518 (65.61%)
+Precision: 0.6561
+Recall: 1.0000
+F1 Score: 0.7924
+Confusion matrix: TP=996, FP=522, TN=0, FN=0
+Predicted positive rate: 1.0000
+Avg prob (true positives): 0.5375
+Avg prob (true negatives): nan
+Model saved to /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/src/trained_model_outputs/2026_04_07_17_18_conv3d_seed_43.pth
+Checkpoint removed (training complete)
+Finished training and testing the model!
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+All done!

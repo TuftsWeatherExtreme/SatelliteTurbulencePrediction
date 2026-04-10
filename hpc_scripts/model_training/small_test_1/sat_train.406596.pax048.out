@@ -1,0 +1,135 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Allocating resources with slurm...
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Tue Apr  7 00:23:43 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 575.57.08              Driver Version: 575.57.08      CUDA Version: 12.9     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA L40                     On  |   00000000:61:00.0 Off |                    0 |
+| N/A   32C    P8             35W /  300W |       0MiB /  46068MiB |      0%      Default |
+|                                         |                        |                  N/A |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+About to train the conv3d model with seed 8
+Using device: cuda (1 GPU(s))
+Model type: conv3d
+Data directory: /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/model_inputs
+SatelliteDataLoader: found 10120 samples
+Dataset size: 10120
+
+L2 alpha = 0.1
+  Fold 0
+    Epoch 0: train_loss=0.4648, val_loss=0.4647
+Checkpoint saved: l2_idx=0, fold=0, epoch=0
+    Epoch 1: train_loss=0.4677, val_loss=0.4710
+Checkpoint saved: l2_idx=0, fold=0, epoch=1
+    Epoch 2: train_loss=0.4683, val_loss=0.4643
+Checkpoint saved: l2_idx=0, fold=0, epoch=2
+    Epoch 3: train_loss=0.4693, val_loss=0.4666
+Checkpoint saved: l2_idx=0, fold=0, epoch=3
+    Epoch 4: train_loss=0.4706, val_loss=0.4667
+Checkpoint saved: l2_idx=0, fold=0, epoch=4
+  Fold 0 final val_loss: 0.4667
+  Fold 1
+    Epoch 0: train_loss=0.4629, val_loss=0.7236
+Checkpoint saved: l2_idx=0, fold=1, epoch=0
+    Epoch 1: train_loss=0.4610, val_loss=0.4687
+Checkpoint saved: l2_idx=0, fold=1, epoch=1
+    Epoch 2: train_loss=0.4650, val_loss=0.4708
+Checkpoint saved: l2_idx=0, fold=1, epoch=2
+    Epoch 3: train_loss=0.4669, val_loss=0.4706
+Checkpoint saved: l2_idx=0, fold=1, epoch=3
+    Epoch 4: train_loss=0.4670, val_loss=0.4715
+Checkpoint saved: l2_idx=0, fold=1, epoch=4
+  Fold 1 final val_loss: 0.4715
+  Fold 2
+    Epoch 0: train_loss=0.4663, val_loss=2.4728
+Checkpoint saved: l2_idx=0, fold=2, epoch=0
+    Epoch 1: train_loss=0.4660, val_loss=0.4651
+Checkpoint saved: l2_idx=0, fold=2, epoch=1
+    Epoch 2: train_loss=0.4665, val_loss=0.4691
+Checkpoint saved: l2_idx=0, fold=2, epoch=2
+    Epoch 3: train_loss=0.4684, val_loss=0.4671
+Checkpoint saved: l2_idx=0, fold=2, epoch=3
+    Epoch 4: train_loss=0.4703, val_loss=0.4679
+Checkpoint saved: l2_idx=0, fold=2, epoch=4
+  Fold 2 final val_loss: 0.4679
+  Average CV loss for l2=0.1: 0.4687
+
+L2 alpha = 0.01
+  Fold 0
+    Epoch 0: train_loss=0.4655, val_loss=0.5233
+Checkpoint saved: l2_idx=1, fold=0, epoch=0
+    Epoch 1: train_loss=0.4647, val_loss=0.4694
+Checkpoint saved: l2_idx=1, fold=0, epoch=1
+    Epoch 2: train_loss=0.4630, val_loss=0.4726
+Checkpoint saved: l2_idx=1, fold=0, epoch=2
+    Epoch 3: train_loss=0.4646, val_loss=0.4590
+Checkpoint saved: l2_idx=1, fold=0, epoch=3
+    Epoch 4: train_loss=0.4642, val_loss=0.4741
+Checkpoint saved: l2_idx=1, fold=0, epoch=4
+  Fold 0 final val_loss: 0.4741
+  Fold 1
+    Epoch 0: train_loss=0.4581, val_loss=2.7210
+Checkpoint saved: l2_idx=1, fold=1, epoch=0
+    Epoch 1: train_loss=0.4567, val_loss=0.4819
+Checkpoint saved: l2_idx=1, fold=1, epoch=1
+    Epoch 2: train_loss=0.4607, val_loss=0.4935
+Checkpoint saved: l2_idx=1, fold=1, epoch=2
+    Epoch 3: train_loss=0.4583, val_loss=0.4733
+Checkpoint saved: l2_idx=1, fold=1, epoch=3
+    Epoch 4: train_loss=0.4598, val_loss=0.4690
+Checkpoint saved: l2_idx=1, fold=1, epoch=4
+  Fold 1 final val_loss: 0.4690
+  Fold 2
+    Epoch 0: train_loss=0.4618, val_loss=0.4842
+Checkpoint saved: l2_idx=1, fold=2, epoch=0
+    Epoch 1: train_loss=0.4646, val_loss=0.4670
+Checkpoint saved: l2_idx=1, fold=2, epoch=1
+    Epoch 2: train_loss=0.4607, val_loss=0.4616
+Checkpoint saved: l2_idx=1, fold=2, epoch=2
+    Epoch 3: train_loss=0.4631, val_loss=0.4759
+Checkpoint saved: l2_idx=1, fold=2, epoch=3
+    Epoch 4: train_loss=0.4622, val_loss=0.4681
+Checkpoint saved: l2_idx=1, fold=2, epoch=4
+  Fold 2 final val_loss: 0.4681
+  Average CV loss for l2=0.01: 0.4704
+
+Best L2 alpha: 0.1 (loss: 0.4687)
+Retraining on full training set...
+  Retrain epoch 0: loss=0.4647
+  Retrain epoch 1: loss=0.4663
+  Retrain epoch 2: loss=0.4687
+  Retrain epoch 3: loss=0.4691
+  Retrain epoch 4: loss=0.4689
+
+Evaluating on test set...
+Accuracy: 1001/1518 (65.94%)
+Precision: 0.6594
+Recall: 1.0000
+F1 Score: 0.7948
+Confusion matrix: TP=1001, FP=517, TN=0, FN=0
+Model saved to /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/src/trained_model_outputs/2026_04_07_00_57_conv3d_seed_8.pth
+Checkpoint removed (training complete)
+Finished training and testing the model!
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+All done!
