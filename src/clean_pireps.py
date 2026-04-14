@@ -273,22 +273,22 @@ eprint(f"Binary filter: {len(sev_pireps)} SEV+ and {len(none_pireps)} NONE/SMOOT
 
 # NOTE FOR SOPHIE: THIS CODE BELOW WAS UPDATED FOR NEXRAD MODEL TO HAVE = NUMBER SEV AND NON-SEV PIREPS, DON'T KNOW IF YOU WANT INCLUDED
 # Filter to SEV and above (turbulence_intensity >= 5)
-#MIN_TURBULENCE_INTENSITY = 5
-#NONSEVERE_TO_SEVERE_RATIO = 1  # For every 1 severe PIREP, include 1 non-severe
+MIN_TURBULENCE_INTENSITY = 5
+NONSEVERE_TO_SEVERE_RATIO = 1  # For every 1 severe PIREP, include 1 non-severe
 
-#len_before_sev_filter = len(only_turb_pireps_w_altitude)
+len_before_sev_filter = len(only_turb_pireps_w_altitude)
 
-#severe_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] >= MIN_TURBULENCE_INTENSITY]
-#nonsevere_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] < MIN_TURBULENCE_INTENSITY]
+severe_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] >= MIN_TURBULENCE_INTENSITY]
+nonsevere_pireps = only_turb_pireps_w_altitude[only_turb_pireps_w_altitude['turbulence_intensity'] < MIN_TURBULENCE_INTENSITY]
 
 # Sample non-severe PIREPs to match ratio
-#num_nonsevere_to_keep = min(len(severe_pireps) * NONSEVERE_TO_SEVERE_RATIO, len(nonsevere_pireps))
-#nonsevere_sampled = nonsevere_pireps.sample(n=num_nonsevere_to_keep, random_state=42)
+num_nonsevere_to_keep = min(len(severe_pireps) * NONSEVERE_TO_SEVERE_RATIO, len(nonsevere_pireps))
+nonsevere_sampled = nonsevere_pireps.sample(n=num_nonsevere_to_keep, random_state=42)
 
-#only_turb_pireps_w_altitude = pd.concat([severe_pireps, nonsevere_sampled]).sample(frac=1, random_state=42).reset_index(drop=True)
+only_turb_pireps_w_altitude = pd.concat([severe_pireps, nonsevere_sampled]).sample(frac=1, random_state=42).reset_index(drop=True)
 
-#eprint(f"Severe PIREPs: {len(severe_pireps)}, Non-severe PIREPs sampled: {num_nonsevere_to_keep}/{len(nonsevere_pireps)}")
-#eprint(f"Final dataset size: {len(only_turb_pireps_w_altitude)}/{len_before_sev_filter} pireps")
+eprint(f"Severe PIREPs: {len(severe_pireps)}, Non-severe PIREPs sampled: {num_nonsevere_to_keep}/{len(nonsevere_pireps)}")
+eprint(f"Final dataset size: {len(only_turb_pireps_w_altitude)}/{len_before_sev_filter} pireps")
 
 
 

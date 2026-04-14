@@ -1,0 +1,43 @@
+srun: error: Unable to create step for job 452880: Invalid generic resource (gres) specification
+**** get_sigmets.py: Download and clean Convective SIGMETs ****
+Fetching SIGMETs from IEM for july 2021...
+URL params: sts=2021-07-01T00:00:00Z, ets=2021-08-01T00:00:00Z
+Response status: 200
+Response was 1263.6 KB
+Loaded 11235 raw SIGMET records
+Dropped 0 rows with missing time/geometry
+Processed 11235 valid SIGMET records
+Writing 11235 SIGMETs to output
+Writing CSV to: /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/src/sigmet_data/2021/07_sigmets.csv
+Finished writing SIGMET CSV
+**** Welcome! This script will take a month and year and return a csv file ****
+**** with pireps that mention turbulence from this month and year          ****
+Performing GET request, this may take a moment...
+Request was 6.97 Mb
+Response status code: 200
+Response text preview: VALID,URGENT,AIRCRAFT,REPORT,ICING,TURBULENCE,ATRCC,PRODUCT_ID,FL,LAT,LON
+202107010000,F,GLF5,FOK UA /OV KFOK/TM 0000/FLDURD/TP GLF5/RM DURD RWY 24 LLWS -25 KTS  SECOND APPCH -15 KTS,None,None,ZBW,None,None,40.84365,-72.63179
+202107010000,F,C56X,SPI UA /OV SPI/TM 0000/FLDURD/TP C56X/SK OVC025-TOP150/WX -RA/TB OCNL LGT BLO 080,None,OCNL LGT BLO 080,ZKC,None,None,39.8447,-89.6839
+202107010001,F,B767,LOZ UA /OV AZQ/TM 0001/FL330/TP B767/TB OCNL LGT CHOP,None,OCNL LGT CHOP,ZID,None,33000,37.39,-83.2
+Attempting to create dataframe from csv file
+Successfully created dataframe from CSV file
+Cleaning dataframe
+Classifying levels of turbulence
+We dropped 27157/52682 pireps with unknown turbulence intensity
+Dropping pireps w/ NA flight level, latitude, or longitude
+We dropped 1339/25525 pireps with unknown flight level, latitude, or longitude
+Binary filter: 153 SEV+ and 153 NONE/SMOOTH from 24186 total
+Severe PIREPs: 153, Non-severe PIREPs sampled: 153/153
+Final dataset size: 306/306 pireps
+Fetching SIGMETs to annotate PIREPs...
+Fetching SIGMETs from IEM for july 2021...
+URL params: sts=2021-07-01T00:00:00Z, ets=2021-08-01T00:00:00Z
+Response status: 200
+Response was 1263.6 KB
+Loaded 11235 raw SIGMET records
+Dropped 0 rows with missing time/geometry
+Processed 11235 valid SIGMET records
+SIGMETs found for 77 PIREPs
+Writing 306 pireps with altitude and turbulence to csv
+Writing csv to output file: /cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction/src/../pireps/2021/07_turb_pireps.csv
+Finished writing csv output

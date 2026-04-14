@@ -54,7 +54,7 @@ if [ "$year" == "2025" ] && [ "$month_num" -gt "04" ]; then
 fi
 
 PIREP_CSV=$SAT_REPO_PATH/pireps/$year/${month_num}_turb_pireps.csv
-OUTPUT_DIR=$SAT_REPO_PATH/new_model_inputs/${year}_${month_num}
+OUTPUT_DIR=$SAT_REPO_PATH/model_inputs/${year}_${month_num}
 
 if [ ! -f "$PIREP_CSV" ]; then
     echo "No PIREP CSV found at $PIREP_CSV, skipping"
