@@ -73,6 +73,6 @@ python3 $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py \
     $PIREP_CSV $OUTPUT_DIR $CHUNK_START $CHUNK_END
 echo "Python script exit code: $?"
 
-# source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
+source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
 
 echo "All done!"

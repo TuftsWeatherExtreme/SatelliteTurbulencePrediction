@@ -7,7 +7,7 @@ import pandas as pd
 
 REPO = os.environ.get("SAT_REPO_PATH", "/cluster/tufts/capstone25skyblue/scleme01/SatelliteTurbulencePrediction")
 PIREPS_DIR = os.path.join(REPO, "pireps")
-INPUTS_DIR = os.path.join(REPO, "new_model_inputs")
+INPUTS_DIR = os.path.join(REPO, "model_inputs")
 
 # GOES-16 availability: March 2017 to April 2025
 YEARS = [str(y) for y in range(2017, 2026)]
