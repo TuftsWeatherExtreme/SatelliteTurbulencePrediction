@@ -278,6 +278,32 @@ def main():
         print(f"Subset smoke test: using {len(dataset)} samples (max {args.max_samples})")
     print(f"Dataset size: {len(dataset)}")
 
+    # ── Diagnostics: label distribution, metadata scale, sample weights ──────
+    print("\n=== STARTUP DIAGNOSTICS ===")
+    sample_indices = list(range(min(500, len(dataset))))
+    labels_sample, weights_sample, meta_sample = [], [], []
+    for i in sample_indices:
+        item = dataset[i]          # (x, meta, y, w)
+        meta_sample.append(item[1].numpy() if hasattr(item[1], 'numpy') else np.array(item[1]))
+        labels_sample.append(int(item[2]))
+        weights_sample.append(float(item[3]))
+    labels_arr   = np.array(labels_sample)
+    weights_arr  = np.array(weights_sample)
+    meta_arr     = np.array(meta_sample)
+    counts       = np.bincount(labels_arr, minlength=2)
+    print(f"Label distribution (first {len(labels_arr)} samples): "
+          f"class 0 = {counts[0]} ({100*counts[0]/len(labels_arr):.1f}%), "
+          f"class 1 = {counts[1]} ({100*counts[1]/len(labels_arr):.1f}%)")
+    print(f"Sample weights — min: {weights_arr.min():.4f}, max: {weights_arr.max():.4f}, "
+          f"mean: {weights_arr.mean():.4f}, std: {weights_arr.std():.4f}")
+    print(f"Metadata shape: {meta_arr.shape}")
+    for fi in range(meta_arr.shape[1]):
+        col = meta_arr[:, fi]
+        print(f"  Feature {fi}: min={col.min():.4f}, max={col.max():.4f}, "
+              f"mean={col.mean():.4f}, std={col.std():.4f}")
+    print("=== END DIAGNOSTICS ===\n")
+    # ─────────────────────────────────────────────────────────────────────────
+
     # Split 85% train, 15% test
     train_dataset, test_dataset = torch.utils.data.random_split(
         dataset, [0.85, 0.15], generator=torch.Generator().manual_seed(SEED)
@@ -385,11 +411,12 @@ def main():
     all_labels = []
     
     with torch.no_grad():
-        for x_test, y_test, w_test in test_loader:
+        for x_test, meta_test, y_test, w_test in test_loader:  # fixed: unpack meta
             x_test = x_test.to(device)
+            meta_test = meta_test.to(device)
             y_test = y_test.long().to(device)
-    
-            y_hat = best_model(x_test)
+
+            y_hat = best_model(x_test, meta_test)  # fixed: pass metadata
     
             # Probability of the positive class (class 1)
             probs = torch.softmax(y_hat, dim=1)[:, 1]

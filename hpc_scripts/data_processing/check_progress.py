@@ -40,12 +40,13 @@ for year in YEARS:
         # Count generated
         found = len([f for f in os.listdir(output_dir) if f.endswith(".npz")]) if os.path.exists(output_dir) else 0
 
+        # expected = expected - 1
         total_expected += expected
         total_found += found
 
         pct = (found / expected * 100) if expected > 0 else 0
         print(f"{year}_{month:<6} {found:>8} / {expected:<10} {pct:>8.1f}%")
-
+	    
 print("-" * 44)
 pct_total = (total_found / total_expected * 100) if total_expected > 0 else 0
 print(f"{'TOTAL':<12} {total_found:>8} / {total_expected:<10} {pct_total:>8.1f}%")

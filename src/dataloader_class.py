@@ -45,4 +45,10 @@ class SatelliteDataLoader(Dataset):
             float(npz.get('in_sigmet', 0)),  # new — defaults to 0 for old .npz files
         ], dtype=torch.float32)
         
+        # Normalize metadata to zero mean, unit std (stats from full dataset diagnostics)
+        
+        META_MEAN = torch.tensor([40.4573, -101.0783, 21619.1992, 0.0460], dtype=torch.float32)
+        META_STD  = torch.tensor([8.4979,   25.4030,  14091.5068, 0.2095], dtype=torch.float32)
+        metadata = (metadata - META_MEAN) / META_STD
+        
         return features, metadata, label, weight
