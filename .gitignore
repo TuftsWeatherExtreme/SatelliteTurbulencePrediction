@@ -12,6 +12,5 @@ model_inputs/
 new_model_inputs/
 decompressed/
 trained_model_outputs/
-*.pth
 *.out
 *.err
