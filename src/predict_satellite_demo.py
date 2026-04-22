@@ -26,10 +26,13 @@ sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import satellite as sat
 from consts import GRID_RANGE, MAP_RANGE, BANDS, NUM_FRAMES, FRAME_INTERVAL_MIN, CROP_SIZE
 from train_and_test_model import ConvLSTMModel, Conv3DModel
+from model_architecture import SatelliteTurbulenceModel
 
 MODEL_FACTORIES = {
     "convlstm": ConvLSTMModel,
     "conv3d": Conv3DModel,
+    # Matches checkpoints whose keys start with "cnn."
+    "cnn": SatelliteTurbulenceModel,
 }
 
 TILE_SIZE = CROP_SIZE  # 128
@@ -104,10 +107,11 @@ def generate_tiles():
     return tiles
 
 
-def predict_tiles(model, conus_frames, tiles, device, batch_size=32):
+def predict_tiles(model, conus_frames, tiles, device, batch_size=32, model_type="conv3d"):
     results = []
     batch_tensors = []
     batch_tiles = []
+    batch_meta = []
 
     for row, col, clat, clon in tiles:
         tile_data = conus_frames[:, row:row+TILE_SIZE, col:col+TILE_SIZE, :]
@@ -117,11 +121,15 @@ def predict_tiles(model, conus_frames, tiles, device, batch_size=32):
         tile_tensor = torch.nan_to_num(tile_tensor, nan=0.0)
         batch_tensors.append(tile_tensor)
         batch_tiles.append((clat, clon))
+        # SatelliteTurbulenceModel expects separate metadata; use [lat, lon, alt, delta_t].
+        # Alt/delta_t aren't defined in this CONUS demo, so we set them to 0.
+        batch_meta.append(torch.tensor([clat, clon, 0.0, 0.0], dtype=torch.float32))
 
         if len(batch_tensors) == batch_size:
             x = torch.stack(batch_tensors).to(device)
+            meta = torch.stack(batch_meta).to(device)
             with torch.no_grad():
-                output = model(x)
+                output = model(x, meta) if model_type == "cnn" else model(x)
             probs = F.softmax(output, dim=-1).cpu().numpy()
             for i, (lat, lon) in enumerate(batch_tiles):
                 results.append({
@@ -131,11 +139,13 @@ def predict_tiles(model, conus_frames, tiles, device, batch_size=32):
                 })
             batch_tensors = []
             batch_tiles = []
+            batch_meta = []
 
     if batch_tensors:
         x = torch.stack(batch_tensors).to(device)
+        meta = torch.stack(batch_meta).to(device)
         with torch.no_grad():
-            output = model(x)
+            output = model(x, meta) if model_type == "cnn" else model(x)
         probs = F.softmax(output, dim=-1).cpu().numpy()
         for i, (lat, lon) in enumerate(batch_tiles):
             results.append({
@@ -206,7 +216,7 @@ def main():
         # Run inference
         t0 = time_module.time()
         print(f"  Running inference on {len(tiles)} tiles...", flush=True)
-        results = predict_tiles(model, conus_frames, tiles, device, args.batch_size)
+        results = predict_tiles(model, conus_frames, tiles, device, args.batch_size, args.model_type)
         print(f"  Inference done ({time_module.time()-t0:.1f}s)", flush=True)
 
         n_severe = sum(1 for r in results if r["pred_class"] == 1)
