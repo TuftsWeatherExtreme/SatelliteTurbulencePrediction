@@ -132,10 +132,14 @@ def predict_tiles(model, conus_frames, tiles, device, batch_size=32, model_type=
                 output = model(x, meta) if model_type == "cnn" else model(x)
             probs = F.softmax(output, dim=-1).cpu().numpy()
             for i, (lat, lon) in enumerate(batch_tiles):
+                p0 = float(probs[i][0]) if probs.shape[1] > 0 else 0.0
+                p1 = float(probs[i][1]) if probs.shape[1] > 1 else 0.0
                 results.append({
                     "lat": lat, "lon": lon,
-                    "severe_prob": float(probs[i][1]),
+                    "severe_prob": p1,
                     "pred_class": int(np.argmax(probs[i])),
+                    "probs": [p0, p1],
+                    "prob_max": float(max(p0, p1)),
                 })
             batch_tensors = []
             batch_tiles = []
@@ -148,10 +152,14 @@ def predict_tiles(model, conus_frames, tiles, device, batch_size=32, model_type=
             output = model(x, meta) if model_type == "cnn" else model(x)
         probs = F.softmax(output, dim=-1).cpu().numpy()
         for i, (lat, lon) in enumerate(batch_tiles):
+            p0 = float(probs[i][0]) if probs.shape[1] > 0 else 0.0
+            p1 = float(probs[i][1]) if probs.shape[1] > 1 else 0.0
             results.append({
                 "lat": lat, "lon": lon,
-                "severe_prob": float(probs[i][1]),
+                "severe_prob": p1,
                 "pred_class": int(np.argmax(probs[i])),
+                "probs": [p0, p1],
+                "prob_max": float(max(p0, p1)),
             })
 
     return results
@@ -231,14 +239,18 @@ def main():
                     "geometry": {"type": "Point", "coordinates": [r["lon"], r["lat"]]},
                     "properties": {
                         "source": "satellite",
-                        "model_type": args.model_type,
                         "pred_class": r["pred_class"],
-                        "severe_prob": r["severe_prob"],
-                        "timestamp": prediction_time.isoformat(),
-                        "step": step,
+                        "probs": r.get("probs"),
+                        "severe_prob": r.get("severe_prob"),
+                        "prob_max": r.get("prob_max"),
+                        "true_class": None,
+                        "flight_level_ft": 0.0,
+                        "delta_t_seconds": 0.0,
+                        "pirep_time": prediction_time.replace(tzinfo=None).isoformat(),
+                        "patch_id": f"sat_demo_{step:02d}_{idx:06d}",
                     },
                 }
-                for r in results
+                for idx, r in enumerate(results)
             ],
         }
 
