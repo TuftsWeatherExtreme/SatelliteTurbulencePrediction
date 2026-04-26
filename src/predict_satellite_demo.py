@@ -167,7 +167,7 @@ def predict_tiles(model, conus_frames, tiles, device, batch_size=32, model_type=
 
 def main():
     parser = argparse.ArgumentParser(
-        description="Generate 16 GeoJSON files for 8 hours of satellite predictions (demo)"
+        description="Generate GeoJSON files for satellite predictions (demo)"
     )
     parser.add_argument("--model-type", choices=sorted(MODEL_FACTORIES.keys()), required=True)
     parser.add_argument("--weights", required=True, type=Path)
@@ -175,8 +175,15 @@ def main():
     parser.add_argument("--device", default=None)
     parser.add_argument("--batch-size", type=int, default=32)
     parser.add_argument("--start-time", type=str, default=None,
-                        help="Start of 8-hour window (ISO format). Default: 8 hours ago.")
+                        help="Start of time window (ISO format). Default: window-length ago.")
+    parser.add_argument("--num-steps", type=int, default=2,
+                        help="Number of prediction steps (default: 2 = 1 hour at 30-min intervals)")
+    parser.add_argument("--step-minutes", type=int, default=30,
+                        help="Minutes between prediction steps (default: 30)")
     args = parser.parse_args()
+
+    num_steps = args.num_steps
+    step_minutes = args.step_minutes
 
     device = torch.device(
         args.device if args.device else ("cuda" if torch.cuda.is_available() else "cpu")
@@ -185,12 +192,14 @@ def main():
     if args.start_time:
         start_time = datetime.fromisoformat(args.start_time).replace(tzinfo=timezone.utc)
     else:
-        start_time = datetime.now(timezone.utc) - timedelta(hours=8)
+        start_time = datetime.now(timezone.utc) - timedelta(minutes=num_steps * step_minutes)
 
     print(f"Device: {device}", flush=True)
     print(f"Model: {args.model_type}", flush=True)
-    print(f"8-hour window: {start_time.isoformat()} to "
-          f"{(start_time + timedelta(hours=8)).isoformat()}", flush=True)
+    print(f"Window: {num_steps} steps x {step_minutes} min = "
+          f"{num_steps * step_minutes} min total", flush=True)
+    print(f"  {start_time.isoformat()} to "
+          f"{(start_time + timedelta(minutes=num_steps * step_minutes)).isoformat()}", flush=True)
 
     # Load model
     model = MODEL_FACTORIES[args.model_type]().to(device)
@@ -207,11 +216,17 @@ def main():
 
     total_start = time_module.time()
 
-    # Generate 16 predictions at 30-minute intervals
-    for step in range(16):
-        prediction_time = start_time + timedelta(minutes=step * 30)
+    for step in range(num_steps):
+        prediction_time = start_time + timedelta(minutes=step * step_minutes)
+        filename = args.output_dir / f"prediction_{step:02d}.geojson"
+
+        # Resume: skip steps that already have output
+        if filename.exists():
+            print(f"\nStep {step+1}/{num_steps}: SKIPPING (already exists: {filename})", flush=True)
+            continue
+
         print(f"\n{'='*60}", flush=True)
-        print(f"Step {step+1}/16: {prediction_time.isoformat()}", flush=True)
+        print(f"Step {step+1}/{num_steps}: {prediction_time.isoformat()}", flush=True)
         print(f"{'='*60}", flush=True)
 
         # Fetch satellite data
