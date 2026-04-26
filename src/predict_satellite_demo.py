@@ -36,7 +36,7 @@ MODEL_FACTORIES = {
 }
 
 TILE_SIZE = CROP_SIZE  # 128
-TILE_STRIDE = 96
+TILE_STRIDE = 32  # dense overlap for better coverage (~50x more tiles than stride=96)
 
 # Rolling cache shared across all 16 prediction windows
 image_cache = {}
@@ -228,7 +228,14 @@ def main():
         print(f"  Inference done ({time_module.time()-t0:.1f}s)", flush=True)
 
         n_severe = sum(1 for r in results if r["pred_class"] == 1)
+        all_probs = [r["severe_prob"] for r in results]
         print(f"  Severe: {n_severe}/{len(results)} ({100*n_severe/len(results):.1f}%)", flush=True)
+        print(f"  severe_prob stats: min={min(all_probs):.4f}, max={max(all_probs):.4f}, "
+              f"mean={np.mean(all_probs):.4f}, median={np.median(all_probs):.4f}", flush=True)
+        print(f"  Distribution: >0.1: {sum(1 for p in all_probs if p > 0.1)}, "
+              f">0.3: {sum(1 for p in all_probs if p > 0.3)}, "
+              f">0.5: {sum(1 for p in all_probs if p > 0.5)}, "
+              f">0.7: {sum(1 for p in all_probs if p > 0.7)}", flush=True)
 
         # Write GeoJSON
         geojson = {
