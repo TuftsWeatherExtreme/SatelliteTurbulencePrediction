@@ -17,6 +17,7 @@
 #SBATCH --error=sat_demo.%j.%N.err
 #SBATCH --mail-type=ALL
 #SBATCH --mail-user=
+#SBATCH --constraint="a100|h100|h200"
 
 cd $SAT_REPO_PATH
 source $SAT_REPO_PATH/hpc_scripts/load_modules.sh

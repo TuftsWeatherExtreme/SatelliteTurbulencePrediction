@@ -1,0 +1,82 @@
+Resetting environment
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+Allocating resources with slurm...
+Loading cuda and miniforge...
+Activating conda environment...
+Redirecting into the satellite repo...
+Done! Environment has now been set up
+Sun Apr 26 21:05:38 2026       
++-----------------------------------------------------------------------------------------+
+| NVIDIA-SMI 575.57.08              Driver Version: 575.57.08      CUDA Version: 12.9     |
+|-----------------------------------------+------------------------+----------------------+
+| GPU  Name                 Persistence-M | Bus-Id          Disp.A | Volatile Uncorr. ECC |
+| Fan  Temp   Perf          Pwr:Usage/Cap |           Memory-Usage | GPU-Util  Compute M. |
+|                                         |                        |               MIG M. |
+|=========================================+========================+======================|
+|   0  NVIDIA H200 NVL                On  |   00000000:15:00.0 Off |                    0 |
+| N/A   48C    P0             76W /  450W |       0MiB / 143771MiB |      0%      Default |
+|                                         |                        |             Disabled |
++-----------------------------------------+------------------------+----------------------+
+                                                                                         
++-----------------------------------------------------------------------------------------+
+| Processes:                                                                              |
+|  GPU   GI   CI              PID   Type   Process name                        GPU Memory |
+|        ID   ID                                                               Usage      |
+|=========================================================================================|
+|  No running processes found                                                             |
++-----------------------------------------------------------------------------------------+
+Generating satellite demo GeoJSONs: model=cnn, start=2026-04-04T10:00:00
+Device: cpu
+Model: cnn
+Window: 2 steps x 30 min = 60 min total
+  2026-04-04T10:00:00+00:00 to 2026-04-04T11:00:00+00:00
+CONUS tiles: 3225 patches
+
+Step 1/2: SKIPPING (already exists: /cluster/tufts/capstone25skyblue/eelkus01/SatelliteTurbulencePrediction/src/demo_satellite/prediction_00.geojson)
+
+============================================================
+Step 2/2: 2026-04-04T10:30:00+00:00
+============================================================
+  Fetching satellite frames...
+    WARNING: Failed to fetch 2026-04-04 10:30:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:30:00+00:00
+    WARNING: Failed to fetch 2026-04-04 10:25:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:25:00+00:00
+    WARNING: Failed to fetch 2026-04-04 10:20:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:20:00+00:00
+    WARNING: Failed to fetch 2026-04-04 10:15:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:15:00+00:00
+    WARNING: Failed to fetch 2026-04-04 10:10:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:10:00+00:00
+    WARNING: Failed to fetch 2026-04-04 10:05:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:05:00+00:00
+    WARNING: Failed to fetch 2026-04-04 10:00:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 10:00:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:55:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:55:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:50:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:50:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:45:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:45:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:40:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:40:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:35:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:35:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:30:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:30:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:25:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:25:00+00:00
+    WARNING: Failed to fetch 2026-04-04 09:20:00+00:00: No L1b-RadC file found for band 8 near 2026-04-04 09:20:00+00:00
+    0 cached, 15 new fetches
+  Frames ready (2.7s). Shape: (15, 1500, 2500, 6)
+  Running inference on 3225 tiles...
+  Inference done (3581.6s)
+  Severe: 0/3225 (0.0%)
+  severe_prob stats: min=0.0000, max=0.0000, mean=0.0000, median=0.0000
+  Distribution: >0.1: 0, >0.3: 0, >0.5: 0, >0.7: 0
+  Wrote /cluster/tufts/capstone25skyblue/eelkus01/SatelliteTurbulencePrediction/src/demo_satellite/prediction_01.geojson
+  Cache size: 15 images
+
+============================================================
+Demo complete. 16 GeoJSONs in 59.7 min
+Total unique satellite images fetched: 15
+Output directory: /cluster/tufts/capstone25skyblue/eelkus01/SatelliteTurbulencePrediction/src/demo_satellite
+Python exit code: 0
+Output files:
+total 2434
+drwxrws--- 2 eelkus01 capstone25skyblue    4096 Apr 26 22:06 .
+drwxrws--- 2 eelkus01 capstone25skyblue    4096 Apr 26 16:56 ..
+-rw-rw---- 1 eelkus01 capstone25skyblue 1245786 Apr 26 20:16 prediction_00.geojson
+-rw-rw---- 1 eelkus01 capstone25skyblue 1245786 Apr 26 22:06 prediction_01.geojson
+Deactivating conda environment (if any)
+Purging all modules
+Done! Environment has been torn down
+All done!
