@@ -1,5 +1,4 @@
 
-
 import datetime as dt
 import numpy as np
 import numpy.typing as npt
@@ -126,6 +125,15 @@ def radiance_to_brightness_temp(rad, fk1, fk2, bc1, bc2):
     return (fk2 / np.log((fk1 / rad) + 1) - bc1) / bc2
 
 
+# Make satellite number configurable based on date
+def get_satellite_bucket(timestamp):
+    # GOES-18 became primary January 2023, GOES-16 data continues but GOES-18 is preferred
+    # For 2025 data, use GOES-18
+    if timestamp.year >= 2023:
+        return "noaa-goes18"
+    return "noaa-goes16"
+
+
 def fetch_l1b_bands(timestamp: dt.datetime, bands: list[int]) -> tuple:
     """
     Fetch individual L1b-RadC band files for GOES-16 CONUS and convert
@@ -151,7 +159,8 @@ def fetch_l1b_bands(timestamp: dt.datetime, bands: list[int]) -> tuple:
     ts = timestamp.replace(tzinfo=None)
 
     # Build S3 prefix for the target hour
-    prefix = f"noaa-goes16/ABI-L1b-RadC/{ts.year}/{ts.timetuple().tm_yday:03d}/{ts.hour:02d}"
+    bucket = get_satellite_bucket(ts)
+    prefix = f"{bucket}/ABI-L1b-RadC/{ts.year}/{ts.timetuple().tm_yday:03d}/{ts.hour:02d}"
 
     all_band_data = []
     first_ds = None

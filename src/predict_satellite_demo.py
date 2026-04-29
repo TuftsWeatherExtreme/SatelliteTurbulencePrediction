@@ -207,6 +207,20 @@ def main():
     if isinstance(raw, dict) and "model_state_dict" in raw:
         raw = raw["model_state_dict"]
     model.load_state_dict(raw, strict=True)
+
+    # Check if model parameters are non-trivial
+    param_sum = sum(p.abs().sum().item() for p in model.parameters())
+    print(f"Model parameter sum: {param_sum:.4f} (should be >> 0)", flush=True)
+    
+    # Run a single random input through and check output variance
+    with torch.no_grad():
+        test_input = torch.randn(4, 15, len(BANDS), TILE_SIZE, TILE_SIZE).to(device)
+        test_meta = torch.zeros(4, 4).to(device)
+        test_out = model(test_input, test_meta) if args.model_type == "cnn" else model(test_input)
+        print(f"Test output on random input: {test_out}", flush=True)
+        print(f"Output variance: {test_out.var().item():.6f} (should be > 0)", flush=True)
+
+
     model.eval()
 
     tiles = generate_tiles()
