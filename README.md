@@ -1,4 +1,4 @@
-# No more Docker usage for this project
+# RAZZLE DAZZLE ROSE
 
 
 # Tufts High Performance Computing Cluster (HPC) Setup and Workflow:
