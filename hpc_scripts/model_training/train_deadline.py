@@ -1,12 +1,15 @@
 # train_deadline.py
-# Authors: Team Celestial Blue
-# Spring 2025
+# Authors: Razzle Dazzle Rose
+# Spring 2026
 # Purpose: Train and evaluate satellite turbulence models using k-fold cross-validation.
 #          Supports both ConvLSTM and Conv3D architectures.
 #          Includes checkpoint/resume for HPC preemption handling.
 # Usage: python train_and_test_model.py <seed> <model_type> [--max-samples N] [--data-dir PATH]
 #        model_type: "convlstm" or "conv3d"
 #        --max-samples: use only the first N .npz files (sorted paths) for a quick smoke test
+
+# Used to train a smaller model while working with a shorter amount of time
+# Mostly outdated file due to shorter training time on full model. 
 
 import argparse
 import os

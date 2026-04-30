@@ -1,11 +1,10 @@
-#!/bin/bash -l
-
 # generate_satellite_data_chunk.sh
-# Authors: Sophie Clemens
+# Authors: Razzle Dazzle Rose
 # Spring 2026
 # Overview: For each month/year of cleaned PIREPs, fetch GOES-16 satellite images
 # (1 frame every 15 minutes for 8 hours, 6 bands) cropped around each PIREP location and save as .npz.
 # Then compress into tar.xz archives.
+# chunks the python script calls for faster download time
 # Note: GOES-16 data only available from March 2017 onward.
 
 #SBATCH -J sat_gen
@@ -47,6 +46,8 @@ if [ "$year" == "2017" ] && [ "$month_num" -lt "03" ]; then
     exit 0
 fi
 
+# GOES-16 not yet available for recent months as of 4/26. More might be 
+# available next time this is run
 if [ "$year" == "2025" ] && [ "$month_num" -gt "04" ]; then
     echo "Skipping $year/$month_num (GOES-16 not yet available on AWS)"
     source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh

@@ -2,7 +2,8 @@
 
 # load_modules.sh
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited by: Razzle Dazzle Rose
+# Spring 2026
 # Overview: Load all modules and activate specified environment.
 # Important: Must be run as `source load_modules.sh`
 

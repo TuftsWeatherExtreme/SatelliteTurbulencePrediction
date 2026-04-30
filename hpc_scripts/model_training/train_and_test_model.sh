@@ -2,9 +2,12 @@
 
 # train_and_test_model.sh
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited by: Razzle Dazzle Rose
+# Spring 2026
 # Overview: Train and test the ConvLSTM satellite turbulence model using GPU resources.
 
+# Usage: sbatch train_and_test_model.py [seed] [model_type]
+ 
 #SBATCH -J sat_train
 #SBATCH --time=02-00:00:00
 #SBATCH -p preempt

@@ -2,7 +2,8 @@
 
 # unload_modules.sh
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited by: Razzle Dazzle Rose
+# Spring 2026
 # Overview: Unload all modules and deactivate environment.
 
 echo "Deactivating conda environment (if any)"

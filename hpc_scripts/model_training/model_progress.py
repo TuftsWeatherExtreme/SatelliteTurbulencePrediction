@@ -1,11 +1,14 @@
 #!/usr/bin/env python3
 # check_progress.py
-# Authors: Team Celestial Blue
-# Usage: python check_progress.py <log_file> [path/to/train_and_test_model.py]
+# Authors: Razzle Dazzle Rose
+# Spring 2026
+# Usage: python check_progress.py <sat_train.[number].out> 
+#                                [path/to/train_and_test_model.py]
 #
 # If the second argument is omitted, looks for train_and_test_model.py at the
 # default repo location relative to this script:
 #   ../src/train_and_test_model.py
+# use to check the progress of a model being trained
 
 import sys
 import re

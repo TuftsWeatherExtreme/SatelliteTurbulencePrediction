@@ -1,4 +1,6 @@
 # check_progress.py
+# Authors: Razzle Dazzle Rose
+# Spring 2026
 # Compares number of .npz files generated vs total PIREPs expected
 # Usage: python check_progress.py
 

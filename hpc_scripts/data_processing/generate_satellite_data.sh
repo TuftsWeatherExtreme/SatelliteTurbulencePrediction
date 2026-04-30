@@ -2,11 +2,13 @@
 
 # generate_satellite_data.sh
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited by: Razzle Dazzle Rode
+# Spring 2026
 # Overview: For each month/year of cleaned PIREPs, fetch GOES-16 satellite images
 # (15 frames, 5 minutes apart, i.e. 75 minutes of timeline ending at the PIREP time, 6 bands) cropped around each PIREP location and save as .npz.
 # Then compress into tar.xz archives.
 # Note: GOES-16 data only available from March 2017 onward.
+# More recently: see generate_satellite_data_chunk.sh
 
 #SBATCH -J sat_gen
 #SBATCH --time=02-00:00:00
@@ -59,6 +61,6 @@ echo "Fetching satellite data for PIREPs in $PIREP_CSV"
 python3 $SAT_REPO_PATH/src/fetch_satellite_for_pireps.py $PIREP_CSV $OUTPUT_DIR
 echo "Python script exit code: $?"
 
-# source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
+source $SAT_REPO_PATH/hpc_scripts/unload_modules.sh
 
 echo "All done!"

@@ -1,11 +1,13 @@
 #!/bin/bash -l
 
 # predict_satellite_demo.sh
-# Authors: Team Celestial Blue
-# Spring 2025
+# Authors: Razzle Dazzle Rose
+# Spring 2026
 # Overview: Generate GeoJSON files for satellite predictions (demo).
 # Default: 2 steps x 30 min = 1 hour window. Use --num-steps for more.
 # Usage: sbatch predict_satellite_demo.sh <model_type> <weights_path> [start_time]
+
+# Warning: not tested and never got good severe turbulence predictions from this
 
 #SBATCH -J sat_demo
 #SBATCH --time=12:00:00

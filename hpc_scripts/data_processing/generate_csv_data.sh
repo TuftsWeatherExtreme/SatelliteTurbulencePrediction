@@ -1,8 +1,6 @@
-#!/bin/bash -l
-
 # generate_csv_data.sh
-# Authors: Team Celestial Blue
-# Spring 2025
+# Authors: Razzle Dazzle Rose
+# Spring 2026
 # Overview: Download and clean PIREP data for binary classification.
 # Outputs SEV+ (label=1) and NONE/SMOOTH (label=0) PIREPs with sample weights.
 # Note: Only 2017+ PIREPs are useful for satellite (GOES-16 availability).
