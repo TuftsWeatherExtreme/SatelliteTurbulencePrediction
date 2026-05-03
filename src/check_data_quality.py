@@ -1,12 +1,15 @@
-#check_data_quality.py
-# NOTE: took 3ish minutes to run with 7800 files. will watch to batch it if running with full data
+# check_data_quality.py
+# Authors: Razzle Dazzle Rose
+# Spring 2026
+# Checking if the satellite image data is pulling severe turbulence
+# NOTE: took 3ish minutes to run with 7.8k files. 
+# will watch to sbatch it if running with full data (about 45k)
 
 import os, numpy as np, glob
 
 data_dir = os.environ["SAT_REPO_PATH"] + "/model_inputs"
 print(os.environ.get("SAT_REPO_PATH"))
 print(os.path.join(os.environ["SAT_REPO_PATH"], "model_inputs"))
-
 
 # files = glob.glob(f"{data_dir}/2017_03/*.npz")
 # print("files found:", len(files))

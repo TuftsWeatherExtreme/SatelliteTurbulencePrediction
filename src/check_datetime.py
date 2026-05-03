@@ -1,4 +1,8 @@
-#!/usr/bin/env python3
+# check_data_quality.py
+# Authors: Razzle Dazzle Rose
+# Spring 2026
+# Checking if the sat images have the correct datetime tags
+
 """
 Read and display the contents of a .npz file in a readable format.
 Usage: python read_npz.py <path_to_file.npz>
