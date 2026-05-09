@@ -1,15 +1,13 @@
 # RAZZLE DAZZLE ROSE
 
+For extensively detailed and fully updated information please refer to our 
+handover document in the google drive.
+
 
 # Tufts High Performance Computing Cluster (HPC) Setup and Workflow:
 ## Usage of Singularity for this project:
 When we run our code on the HPC, we need to use Singularity (Docker for Computing Clusters) to run our container.
 We accomplish this by doing the following:
-
-### Pushing Docker image to remote repo:
-1) Login to a docker hub account: `docker login`
-2) Rename docker image to whatever you want it to be named in the repo: `docker tag <local_image>:<tag> <desired_name>:<desired_tag>`
-3) Push to repo: `docker push <desired_name>:<desired_tag>`
 
 ### Pulling and Running Images on the HPC
 1) Log into a HPC node
