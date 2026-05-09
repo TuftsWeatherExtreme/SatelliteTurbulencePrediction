@@ -1,4 +1,7 @@
 # Satellite constants
+# Authors: Razzle Dazzle Rose
+# Spring 2026
+
 BANDS = [8, 9, 10, 13, 14, 15]
 NUM_FRAMES = 15
 FRAME_INTERVAL_MIN = 5  # minutes between frames

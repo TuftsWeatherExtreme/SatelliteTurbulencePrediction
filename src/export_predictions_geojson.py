@@ -1,5 +1,6 @@
 """
-export_predictions_geojson.py
+Authors: Razzle Dazzle Rose
+Spring 2026
 
 Purpose
 -------

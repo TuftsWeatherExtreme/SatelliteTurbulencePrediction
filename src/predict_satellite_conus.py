@@ -1,6 +1,7 @@
 # predict_satellite_conus.py
 # Team Celestial Blue
-# Spring 2025
+# Edited: Razzle Dazzle Rose
+# Spring 2026
 # Purpose: Pull current GOES-16 satellite data, tile CONUS into 128x128 patches,
 #          run the trained model on each patch, and output a GeoJSON file.
 #          Maintains a rolling cache of the last 75 minutes of satellite images

@@ -1,6 +1,7 @@
 # predict_satellite_demo.py
 # Team Celestial Blue
-# Spring 2025
+# Edited: Razzle Dazzle Rose
+# Spring 2026
 # Purpose: Generate 16 GeoJSON files representing 8 hours of satellite
 #          turbulence predictions at 30-minute intervals, for frontend demo.
 #

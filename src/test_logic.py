@@ -1,3 +1,6 @@
+# Authors: Razzle Dazzle Rose
+# Spring 2026
+
 import pandas as pd
 import os
 

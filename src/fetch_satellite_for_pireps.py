@@ -1,6 +1,7 @@
 # fetch_satellite_for_pireps.py
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited: Razzle Dazzle Rose
+# Spring 2026
 # Purpose: For each PIREP in a clean CSV, fetch GOES-16 satellite images
 #          at 15-min intervals, crop around the PIREP location, and save as .npz.
 # Usage: python -u fetch_satellite_for_pireps.py <input_csv> <output_dir> [chunk_start] [chunk_end]

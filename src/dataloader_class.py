@@ -1,6 +1,7 @@
 # dataloader_class.py
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited: Razzle Dazzle Rose
+# Spring 2026
 # Overview: PyTorch Dataset that lazily loads satellite .npz model inputs from disk.
 
 import torch

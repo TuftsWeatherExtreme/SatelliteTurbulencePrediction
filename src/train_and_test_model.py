@@ -1,6 +1,7 @@
 # train_and_test_model.py
 # Authors: Team Celestial Blue
-# Spring 2025
+# Edited: Razzle Dazzle Rose
+# Spring 2026
 # Purpose: Train and evaluate satellite turbulence models using k-fold cross-validation.
 #          Supports both ConvLSTM and Conv3D architectures.
 #          Includes checkpoint/resume for HPC preemption handling.

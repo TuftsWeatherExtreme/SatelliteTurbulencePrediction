@@ -1,4 +1,7 @@
 # model_architecture.py (new file)
+# Authors: Razzle Dazzle Rose
+# Spring 2026
+
 import torch
 import torch.nn as nn
 
